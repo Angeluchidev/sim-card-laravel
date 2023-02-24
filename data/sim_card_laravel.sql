@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 24-02-2023 a las 14:19:38
+-- Tiempo de generación: 24-02-2023 a las 16:19:49
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 7.4.27
 
@@ -161,7 +161,10 @@ INSERT INTO `cms_logs` (`id`, `ipaddress`, `useragent`, `url`, `description`, `d
 (1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/login', 'admin@crudbooster.com login with IP Address 127.0.0.1', '', 1, '2023-02-23 14:11:15', NULL),
 (2, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/login', 'admin@crudbooster.com login with IP Address 127.0.0.1', '', 1, '2023-02-23 15:03:52', NULL),
 (3, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/planes/add-save', 'Add New Data  at Planes', '', 1, '2023-02-23 15:10:37', NULL),
-(4, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/menu_management/edit-save/1', 'Actualizar información Planes en Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td></td><td>normal</td></tr><tr><td>icon</td><td>fa fa-glass</td><td>fa fa-star</td></tr></tbody></table>', 1, '2023-02-23 15:34:59', NULL);
+(4, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/menu_management/edit-save/1', 'Actualizar información Planes en Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td></td><td>normal</td></tr><tr><td>icon</td><td>fa fa-glass</td><td>fa fa-star</td></tr></tbody></table>', 1, '2023-02-23 15:34:59', NULL),
+(5, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/planes/edit-save/1', 'Actualizar información  en Planes', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>descripcion</td><td>descrip plan naraja mod</td><td>descrip plan naraja mod 1</td></tr></tbody></table>', 1, '2023-02-24 18:55:37', NULL),
+(6, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/menu_management/edit-save/2', 'Actualizar información Países en Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td></td><td>normal</td></tr><tr><td>icon</td><td>fa fa-glass</td><td>fa fa-flag</td></tr><tr><td>sorting</td><td>2</td><td></td></tr></tbody></table>', 1, '2023-02-24 19:11:55', NULL),
+(7, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/paises/add-save', 'Añadir nueva información  en Países', '', 1, '2023-02-24 19:17:46', NULL);
 
 -- --------------------------------------------------------
 
@@ -190,7 +193,8 @@ CREATE TABLE `cms_menus` (
 --
 
 INSERT INTO `cms_menus` (`id`, `name`, `type`, `path`, `color`, `icon`, `parent_id`, `is_active`, `is_dashboard`, `id_cms_privileges`, `sorting`, `created_at`, `updated_at`) VALUES
-(1, 'Planes', 'Route', 'AdminPlanesControllerGetIndex', 'normal', 'fa fa-star', 0, 1, 0, 1, 1, '2023-02-23 15:07:39', '2023-02-23 15:34:58');
+(1, 'Planes', 'Route', 'AdminPlanesControllerGetIndex', 'normal', 'fa fa-star', 0, 1, 0, 1, 1, '2023-02-23 15:07:39', '2023-02-23 15:34:58'),
+(2, 'Países', 'Route', 'AdminPaisesControllerGetIndex', 'normal', 'fa fa-flag', 0, 1, 0, 1, 2, '2023-02-24 19:10:04', '2023-02-24 19:11:55');
 
 -- --------------------------------------------------------
 
@@ -209,7 +213,8 @@ CREATE TABLE `cms_menus_privileges` (
 --
 
 INSERT INTO `cms_menus_privileges` (`id`, `id_cms_menus`, `id_cms_privileges`) VALUES
-(2, 1, 1);
+(2, 1, 1),
+(4, 2, 1);
 
 -- --------------------------------------------------------
 
@@ -247,7 +252,8 @@ INSERT INTO `cms_moduls` (`id`, `name`, `icon`, `path`, `table_name`, `controlle
 (9, 'Statistic Builder', 'fa fa-dashboard', 'statistic_builder', 'cms_statistics', 'StatisticBuilderController', 1, 1, '2023-02-23 14:10:10', NULL, NULL),
 (10, 'API Generator', 'fa fa-cloud-download', 'api_generator', '', 'ApiCustomController', 1, 1, '2023-02-23 14:10:10', NULL, NULL),
 (11, 'Log User Access', 'fa fa-flag-o', 'logs', 'cms_logs', 'LogsController', 1, 1, '2023-02-23 14:10:10', NULL, NULL),
-(12, 'Planes', 'fa fa-credit-card', 'planes', 'planes', 'AdminPlanesController', 0, 0, '2023-02-23 15:07:39', NULL, NULL);
+(12, 'Planes', 'fa fa-credit-card', 'planes', 'planes', 'AdminPlanesController', 0, 0, '2023-02-23 15:07:39', NULL, NULL),
+(13, 'Países', 'fa fa-flag', 'paises', 'paises', 'AdminPaisesController', 0, 0, '2023-02-24 19:10:04', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -322,7 +328,8 @@ INSERT INTO `cms_privileges_roles` (`id`, `is_visible`, `is_create`, `is_read`, 
 (9, 1, 1, 1, 1, 1, 1, 9, '2023-02-23 14:10:12', NULL),
 (10, 1, 1, 1, 1, 1, 1, 10, '2023-02-23 14:10:12', NULL),
 (11, 1, 0, 1, 0, 1, 1, 11, '2023-02-23 14:10:12', NULL),
-(12, 1, 1, 1, 1, 1, 1, 12, NULL, NULL);
+(12, 1, 1, 1, 1, 1, 1, 12, NULL, NULL),
+(13, 1, 1, 1, 1, 1, 1, 13, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -357,13 +364,13 @@ INSERT INTO `cms_settings` (`id`, `name`, `content`, `content_input_type`, `data
 (7, 'smtp_port', '25', 'text', NULL, 'default 25', '2023-02-23 14:10:10', NULL, 'Email Setting', 'SMTP Port'),
 (8, 'smtp_username', '', 'text', NULL, NULL, '2023-02-23 14:10:10', NULL, 'Email Setting', 'SMTP Username'),
 (9, 'smtp_password', '', 'text', NULL, NULL, '2023-02-23 14:10:10', NULL, 'Email Setting', 'SMTP Password'),
-(10, 'appname', 'CRUDBooster', 'text', NULL, NULL, '2023-02-23 14:10:10', NULL, 'Application Setting', 'Application Name'),
+(10, 'appname', 'Sim-Cards', 'text', NULL, NULL, '2023-02-23 14:10:10', NULL, 'Application Setting', 'Application Name'),
 (11, 'default_paper_size', 'Legal', 'text', NULL, 'Paper size, ex : A4, Legal, etc', '2023-02-23 14:10:10', NULL, 'Application Setting', 'Default Paper Print Size'),
-(12, 'logo', '', 'upload_image', NULL, NULL, '2023-02-23 14:10:10', NULL, 'Application Setting', 'Logo'),
-(13, 'favicon', '', 'upload_image', NULL, NULL, '2023-02-23 14:10:10', NULL, 'Application Setting', 'Favicon'),
+(12, 'logo', NULL, 'upload_image', NULL, NULL, '2023-02-23 14:10:10', NULL, 'Application Setting', 'Logo'),
+(13, 'favicon', NULL, 'upload_image', NULL, NULL, '2023-02-23 14:10:10', NULL, 'Application Setting', 'Favicon'),
 (14, 'api_debug_mode', 'true', 'select', 'true,false', NULL, '2023-02-23 14:10:10', NULL, 'Application Setting', 'API Debug Mode'),
-(15, 'google_api_key', '', 'text', NULL, NULL, '2023-02-23 14:10:10', NULL, 'Application Setting', 'Google API Key'),
-(16, 'google_fcm_key', '', 'text', NULL, NULL, '2023-02-23 14:10:10', NULL, 'Application Setting', 'Google FCM Key');
+(15, 'google_api_key', NULL, 'text', NULL, NULL, '2023-02-23 14:10:10', NULL, 'Application Setting', 'Google API Key'),
+(16, 'google_fcm_key', NULL, 'text', NULL, NULL, '2023-02-23 14:10:10', NULL, 'Application Setting', 'Google FCM Key');
 
 -- --------------------------------------------------------
 
@@ -538,6 +545,13 @@ CREATE TABLE `paises` (
   `descripcion` varchar(100) COLLATE utf8mb4_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci ROW_FORMAT=DYNAMIC;
 
+--
+-- Volcado de datos para la tabla `paises`
+--
+
+INSERT INTO `paises` (`id`, `descripcion`) VALUES
+(1, 'Venezuela');
+
 -- --------------------------------------------------------
 
 --
@@ -598,7 +612,7 @@ CREATE TABLE `planes` (
 --
 
 INSERT INTO `planes` (`id`, `Plan`, `descripcion`) VALUES
-(1, 'plan Naranja', 'descrip plan naraja mod');
+(1, 'plan Naranja', 'descrip plan naraja mod 1');
 
 -- --------------------------------------------------------
 
@@ -938,25 +952,25 @@ ALTER TABLE `cms_email_templates`
 -- AUTO_INCREMENT de la tabla `cms_logs`
 --
 ALTER TABLE `cms_logs`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `cms_menus`
 --
 ALTER TABLE `cms_menus`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `cms_menus_privileges`
 --
 ALTER TABLE `cms_menus_privileges`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `cms_moduls`
 --
 ALTER TABLE `cms_moduls`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT de la tabla `cms_notifications`
@@ -974,7 +988,7 @@ ALTER TABLE `cms_privileges`
 -- AUTO_INCREMENT de la tabla `cms_privileges_roles`
 --
 ALTER TABLE `cms_privileges_roles`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT de la tabla `cms_settings`
@@ -1028,7 +1042,7 @@ ALTER TABLE `operadoras`
 -- AUTO_INCREMENT de la tabla `paises`
 --
 ALTER TABLE `paises`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `personal_access_tokens`
