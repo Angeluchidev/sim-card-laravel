@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-02-2023 a las 22:35:14
+-- Tiempo de generación: 26-02-2023 a las 23:20:44
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 7.4.27
 
@@ -31,6 +31,13 @@ CREATE TABLE `almacenes` (
   `id` int(11) NOT NULL,
   `descripcion` varchar(100) COLLATE utf8mb4_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci ROW_FORMAT=DYNAMIC;
+
+--
+-- Volcado de datos para la tabla `almacenes`
+--
+
+INSERT INTO `almacenes` (`id`, `descripcion`) VALUES
+(1, 'Almacen 1');
 
 -- --------------------------------------------------------
 
@@ -167,7 +174,13 @@ INSERT INTO `cms_logs` (`id`, `ipaddress`, `useragent`, `url`, `description`, `d
 (7, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/paises/add-save', 'Añadir nueva información  en Países', '', 1, '2023-02-24 19:17:46', NULL),
 (8, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/operadoras/add-save', 'Añadir nueva información  en Operadoras', '', 1, '2023-02-24 19:39:56', NULL),
 (9, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/sucursales/add-save', 'Añadir nueva información  en Sucursales', '', 1, '2023-02-24 20:14:50', NULL),
-(10, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/login', 'Ingreso de admin@crudbooster.com desde la Dirección IP 127.0.0.1', '', 1, '2023-02-27 01:22:15', NULL);
+(10, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/login', 'Ingreso de admin@crudbooster.com desde la Dirección IP 127.0.0.1', '', 1, '2023-02-27 01:22:15', NULL),
+(11, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/status/edit-save/3', 'Actualizar información  en Estatus', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>descripcion</td><td>En Simbank</td><td>En Simbank mod</td></tr></tbody></table>', 1, '2023-02-27 01:42:39', NULL),
+(12, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/status/edit-save/3', 'Actualizar información  en Estatus', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>descripcion</td><td>En Simbank mod</td><td>En Simbank</td></tr></tbody></table>', 1, '2023-02-27 01:42:50', NULL),
+(13, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/users/edit-save/1', 'Actualizar información Super Admin en Users Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>photo</td><td></td><td>uploads/1/2023-02/99bb7520c30f3f711f6d46e81dc7bfd3.png</td></tr><tr><td>password</td><td>$2y$10$pCULGhGN9d.oHkpb5KSbwuosuyUb8n6hdIoVa.cBLW/TwWO7cLyM.</td><td>$2y$10$6BjhDfYkCQ.yXDXACey49eUgIGrvt.NEggS.1VZJzZSN5x2pR81dS</td></tr><tr><td>status</td><td>Active</td><td></td></tr></tbody></table>', 1, '2023-02-27 01:48:05', NULL),
+(14, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/logout', 'admin@crudbooster.com se desconectó', '', 1, '2023-02-27 01:48:32', NULL),
+(15, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/login', 'Ingreso de admin@crudbooster.com desde la Dirección IP 127.0.0.1', '', 1, '2023-02-27 01:48:36', NULL),
+(16, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/almacenes/add-save', 'Añadir nueva información  en Almacenes', '', 1, '2023-02-27 02:19:06', NULL);
 
 -- --------------------------------------------------------
 
@@ -200,7 +213,8 @@ INSERT INTO `cms_menus` (`id`, `name`, `type`, `path`, `color`, `icon`, `parent_
 (2, 'Países', 'Route', 'AdminPaisesControllerGetIndex', 'normal', 'fa fa-flag', 0, 1, 0, 1, 2, '2023-02-24 19:10:04', '2023-02-24 19:11:55'),
 (3, 'Operadoras', 'Route', 'AdminOperadorasControllerGetIndex', NULL, 'fa fa-phone', 0, 1, 0, 1, 3, '2023-02-24 19:34:21', NULL),
 (4, 'Sucursales', 'Route', 'AdminSucursalesControllerGetIndex', NULL, 'fa fa-industry', 0, 1, 0, 1, 4, '2023-02-24 20:08:05', NULL),
-(5, 'Estatus', 'Route', 'AdminStatusControllerGetIndex', NULL, 'fa fa-list-alt', 0, 1, 0, 1, 5, '2023-02-27 01:31:43', NULL);
+(5, 'Estatus', 'Route', 'AdminStatusControllerGetIndex', NULL, 'fa fa-list-alt', 0, 1, 0, 1, 5, '2023-02-27 01:31:43', NULL),
+(6, 'Almacenes', 'Route', 'AdminAlmacenesControllerGetIndex', NULL, 'fa fa-home', 0, 1, 0, 1, 6, '2023-02-27 02:12:35', NULL);
 
 -- --------------------------------------------------------
 
@@ -223,7 +237,8 @@ INSERT INTO `cms_menus_privileges` (`id`, `id_cms_menus`, `id_cms_privileges`) V
 (4, 2, 1),
 (5, 3, 1),
 (6, 4, 1),
-(7, 5, 1);
+(7, 5, 1),
+(8, 6, 1);
 
 -- --------------------------------------------------------
 
@@ -265,7 +280,8 @@ INSERT INTO `cms_moduls` (`id`, `name`, `icon`, `path`, `table_name`, `controlle
 (13, 'Países', 'fa fa-flag', 'paises', 'paises', 'AdminPaisesController', 0, 0, '2023-02-24 19:10:04', NULL, NULL),
 (14, 'Operadoras', 'fa fa-phone', 'operadoras', 'operadoras', 'AdminOperadorasController', 0, 0, '2023-02-24 19:34:20', NULL, NULL),
 (15, 'Sucursales', 'fa fa-industry', 'sucursales', 'sucursales', 'AdminSucursalesController', 0, 0, '2023-02-24 20:08:05', NULL, NULL),
-(16, 'Estatus', 'fa fa-list-alt', 'status', 'status', 'AdminStatusController', 0, 0, '2023-02-27 01:31:42', NULL, NULL);
+(16, 'Estatus', 'fa fa-list-alt', 'status', 'status', 'AdminStatusController', 0, 0, '2023-02-27 01:31:42', NULL, NULL),
+(17, 'Almacenes', 'fa fa-home', 'almacenes', 'almacenes', 'AdminAlmacenesController', 0, 0, '2023-02-27 02:12:35', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -344,7 +360,8 @@ INSERT INTO `cms_privileges_roles` (`id`, `is_visible`, `is_create`, `is_read`, 
 (13, 1, 1, 1, 1, 1, 1, 13, NULL, NULL),
 (14, 1, 1, 1, 1, 1, 1, 14, NULL, NULL),
 (15, 1, 1, 1, 1, 1, 1, 15, NULL, NULL),
-(16, 1, 1, 1, 1, 1, 1, 16, NULL, NULL);
+(16, 1, 1, 1, 1, 1, 1, 16, NULL, NULL),
+(17, 1, 1, 1, 1, 1, 1, 17, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -443,7 +460,7 @@ CREATE TABLE `cms_users` (
 --
 
 INSERT INTO `cms_users` (`id`, `name`, `photo`, `email`, `password`, `id_cms_privileges`, `created_at`, `updated_at`, `status`) VALUES
-(1, 'Super Admin', NULL, 'admin@crudbooster.com', '$2y$10$pCULGhGN9d.oHkpb5KSbwuosuyUb8n6hdIoVa.cBLW/TwWO7cLyM.', 1, '2023-02-23 14:10:10', NULL, 'Active');
+(1, 'Super Admin', 'uploads/1/2023-02/99bb7520c30f3f711f6d46e81dc7bfd3.png', 'admin@crudbooster.com', '$2y$10$6BjhDfYkCQ.yXDXACey49eUgIGrvt.NEggS.1VZJzZSN5x2pR81dS', 1, '2023-02-23 14:10:10', '2023-02-27 01:48:05', 'Active');
 
 -- --------------------------------------------------------
 
@@ -945,7 +962,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `almacenes`
 --
 ALTER TABLE `almacenes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `cms_apicustom`
@@ -981,25 +998,25 @@ ALTER TABLE `cms_email_templates`
 -- AUTO_INCREMENT de la tabla `cms_logs`
 --
 ALTER TABLE `cms_logs`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT de la tabla `cms_menus`
 --
 ALTER TABLE `cms_menus`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `cms_menus_privileges`
 --
 ALTER TABLE `cms_menus_privileges`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `cms_moduls`
 --
 ALTER TABLE `cms_moduls`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT de la tabla `cms_notifications`
@@ -1017,7 +1034,7 @@ ALTER TABLE `cms_privileges`
 -- AUTO_INCREMENT de la tabla `cms_privileges_roles`
 --
 ALTER TABLE `cms_privileges_roles`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT de la tabla `cms_settings`
