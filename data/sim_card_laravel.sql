@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 24-02-2023 a las 17:15:28
+-- Tiempo de generación: 26-02-2023 a las 22:35:14
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 7.4.27
 
@@ -166,7 +166,8 @@ INSERT INTO `cms_logs` (`id`, `ipaddress`, `useragent`, `url`, `description`, `d
 (6, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/menu_management/edit-save/2', 'Actualizar información Países en Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td></td><td>normal</td></tr><tr><td>icon</td><td>fa fa-glass</td><td>fa fa-flag</td></tr><tr><td>sorting</td><td>2</td><td></td></tr></tbody></table>', 1, '2023-02-24 19:11:55', NULL),
 (7, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/paises/add-save', 'Añadir nueva información  en Países', '', 1, '2023-02-24 19:17:46', NULL),
 (8, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/operadoras/add-save', 'Añadir nueva información  en Operadoras', '', 1, '2023-02-24 19:39:56', NULL),
-(9, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/sucursales/add-save', 'Añadir nueva información  en Sucursales', '', 1, '2023-02-24 20:14:50', NULL);
+(9, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/sucursales/add-save', 'Añadir nueva información  en Sucursales', '', 1, '2023-02-24 20:14:50', NULL),
+(10, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/login', 'Ingreso de admin@crudbooster.com desde la Dirección IP 127.0.0.1', '', 1, '2023-02-27 01:22:15', NULL);
 
 -- --------------------------------------------------------
 
@@ -198,7 +199,8 @@ INSERT INTO `cms_menus` (`id`, `name`, `type`, `path`, `color`, `icon`, `parent_
 (1, 'Planes', 'Route', 'AdminPlanesControllerGetIndex', 'normal', 'fa fa-star', 0, 1, 0, 1, 1, '2023-02-23 15:07:39', '2023-02-23 15:34:58'),
 (2, 'Países', 'Route', 'AdminPaisesControllerGetIndex', 'normal', 'fa fa-flag', 0, 1, 0, 1, 2, '2023-02-24 19:10:04', '2023-02-24 19:11:55'),
 (3, 'Operadoras', 'Route', 'AdminOperadorasControllerGetIndex', NULL, 'fa fa-phone', 0, 1, 0, 1, 3, '2023-02-24 19:34:21', NULL),
-(4, 'Sucursales', 'Route', 'AdminSucursalesControllerGetIndex', NULL, 'fa fa-industry', 0, 1, 0, 1, 4, '2023-02-24 20:08:05', NULL);
+(4, 'Sucursales', 'Route', 'AdminSucursalesControllerGetIndex', NULL, 'fa fa-industry', 0, 1, 0, 1, 4, '2023-02-24 20:08:05', NULL),
+(5, 'Estatus', 'Route', 'AdminStatusControllerGetIndex', NULL, 'fa fa-list-alt', 0, 1, 0, 1, 5, '2023-02-27 01:31:43', NULL);
 
 -- --------------------------------------------------------
 
@@ -220,7 +222,8 @@ INSERT INTO `cms_menus_privileges` (`id`, `id_cms_menus`, `id_cms_privileges`) V
 (2, 1, 1),
 (4, 2, 1),
 (5, 3, 1),
-(6, 4, 1);
+(6, 4, 1),
+(7, 5, 1);
 
 -- --------------------------------------------------------
 
@@ -261,7 +264,8 @@ INSERT INTO `cms_moduls` (`id`, `name`, `icon`, `path`, `table_name`, `controlle
 (12, 'Planes', 'fa fa-credit-card', 'planes', 'planes', 'AdminPlanesController', 0, 0, '2023-02-23 15:07:39', NULL, NULL),
 (13, 'Países', 'fa fa-flag', 'paises', 'paises', 'AdminPaisesController', 0, 0, '2023-02-24 19:10:04', NULL, NULL),
 (14, 'Operadoras', 'fa fa-phone', 'operadoras', 'operadoras', 'AdminOperadorasController', 0, 0, '2023-02-24 19:34:20', NULL, NULL),
-(15, 'Sucursales', 'fa fa-industry', 'sucursales', 'sucursales', 'AdminSucursalesController', 0, 0, '2023-02-24 20:08:05', NULL, NULL);
+(15, 'Sucursales', 'fa fa-industry', 'sucursales', 'sucursales', 'AdminSucursalesController', 0, 0, '2023-02-24 20:08:05', NULL, NULL),
+(16, 'Estatus', 'fa fa-list-alt', 'status', 'status', 'AdminStatusController', 0, 0, '2023-02-27 01:31:42', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -339,7 +343,8 @@ INSERT INTO `cms_privileges_roles` (`id`, `is_visible`, `is_create`, `is_read`, 
 (12, 1, 1, 1, 1, 1, 1, 12, NULL, NULL),
 (13, 1, 1, 1, 1, 1, 1, 13, NULL, NULL),
 (14, 1, 1, 1, 1, 1, 1, 14, NULL, NULL),
-(15, 1, 1, 1, 1, 1, 1, 15, NULL, NULL);
+(15, 1, 1, 1, 1, 1, 1, 15, NULL, NULL),
+(16, 1, 1, 1, 1, 1, 1, 16, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -976,25 +981,25 @@ ALTER TABLE `cms_email_templates`
 -- AUTO_INCREMENT de la tabla `cms_logs`
 --
 ALTER TABLE `cms_logs`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `cms_menus`
 --
 ALTER TABLE `cms_menus`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `cms_menus_privileges`
 --
 ALTER TABLE `cms_menus_privileges`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `cms_moduls`
 --
 ALTER TABLE `cms_moduls`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT de la tabla `cms_notifications`
@@ -1012,7 +1017,7 @@ ALTER TABLE `cms_privileges`
 -- AUTO_INCREMENT de la tabla `cms_privileges_roles`
 --
 ALTER TABLE `cms_privileges_roles`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT de la tabla `cms_settings`
