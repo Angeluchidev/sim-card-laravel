@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-02-2023 a las 23:20:44
+-- Tiempo de generación: 27-02-2023 a las 03:17:29
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 7.4.27
 
@@ -180,7 +180,20 @@ INSERT INTO `cms_logs` (`id`, `ipaddress`, `useragent`, `url`, `description`, `d
 (13, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/users/edit-save/1', 'Actualizar información Super Admin en Users Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>photo</td><td></td><td>uploads/1/2023-02/99bb7520c30f3f711f6d46e81dc7bfd3.png</td></tr><tr><td>password</td><td>$2y$10$pCULGhGN9d.oHkpb5KSbwuosuyUb8n6hdIoVa.cBLW/TwWO7cLyM.</td><td>$2y$10$6BjhDfYkCQ.yXDXACey49eUgIGrvt.NEggS.1VZJzZSN5x2pR81dS</td></tr><tr><td>status</td><td>Active</td><td></td></tr></tbody></table>', 1, '2023-02-27 01:48:05', NULL),
 (14, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/logout', 'admin@crudbooster.com se desconectó', '', 1, '2023-02-27 01:48:32', NULL),
 (15, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/login', 'Ingreso de admin@crudbooster.com desde la Dirección IP 127.0.0.1', '', 1, '2023-02-27 01:48:36', NULL),
-(16, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/almacenes/add-save', 'Añadir nueva información  en Almacenes', '', 1, '2023-02-27 02:19:06', NULL);
+(16, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/almacenes/add-save', 'Añadir nueva información  en Almacenes', '', 1, '2023-02-27 02:19:06', NULL),
+(17, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/paises/add-save', 'Añadir nueva información  en Países', '', 1, '2023-02-27 03:43:21', NULL),
+(18, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/lotes/add-save', 'Añadir nueva información  en Lotes', '', 1, '2023-02-27 03:46:10', NULL),
+(19, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/lotes/add-save', 'Añadir nueva información  en Lotes', '', 1, '2023-02-27 04:47:44', NULL),
+(20, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/logout', 'admin@crudbooster.com se desconectó', '', 1, '2023-02-27 04:49:11', NULL),
+(21, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/login', 'Ingreso de admin@crudbooster.com desde la Dirección IP 127.0.0.1', '', 1, '2023-02-27 04:49:15', NULL),
+(22, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/lotes/add-save', 'Añadir nueva información  en Lotes', '', 1, '2023-02-27 05:00:24', NULL),
+(23, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/lotes/edit-save/2', 'Actualizar información  en Lotes', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody></tbody></table>', 1, '2023-02-27 05:01:41', NULL),
+(24, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/lotes/edit-save/2', 'Actualizar información  en Lotes', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>fecha_lote</td><td>2023-02-15</td><td>2023-02-16</td></tr></tbody></table>', 1, '2023-02-27 05:03:29', NULL),
+(25, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/operadoras/add-save', 'Añadir nueva información  en Operadoras', '', 1, '2023-02-27 05:04:49', NULL),
+(26, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/operadoras/add-save', 'Añadir nueva información  en Operadoras', '', 1, '2023-02-27 05:05:14', NULL),
+(27, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/operadoras/add-save', 'Añadir nueva información  en Operadoras', '', 1, '2023-02-27 05:06:51', NULL),
+(28, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/lotes/edit-save/2', 'Actualizar información  en Lotes', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody></tbody></table>', 1, '2023-02-27 05:07:11', NULL),
+(29, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/lotes/edit-save/2', 'Actualizar información  en Lotes', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>operadoras_id</td><td>4</td><td>1</td></tr><tr><td>paises_id</td><td>2</td><td>1</td></tr></tbody></table>', 1, '2023-02-27 05:33:50', NULL);
 
 -- --------------------------------------------------------
 
@@ -214,7 +227,8 @@ INSERT INTO `cms_menus` (`id`, `name`, `type`, `path`, `color`, `icon`, `parent_
 (3, 'Operadoras', 'Route', 'AdminOperadorasControllerGetIndex', NULL, 'fa fa-phone', 0, 1, 0, 1, 3, '2023-02-24 19:34:21', NULL),
 (4, 'Sucursales', 'Route', 'AdminSucursalesControllerGetIndex', NULL, 'fa fa-industry', 0, 1, 0, 1, 4, '2023-02-24 20:08:05', NULL),
 (5, 'Estatus', 'Route', 'AdminStatusControllerGetIndex', NULL, 'fa fa-list-alt', 0, 1, 0, 1, 5, '2023-02-27 01:31:43', NULL),
-(6, 'Almacenes', 'Route', 'AdminAlmacenesControllerGetIndex', NULL, 'fa fa-home', 0, 1, 0, 1, 6, '2023-02-27 02:12:35', NULL);
+(6, 'Almacenes', 'Route', 'AdminAlmacenesControllerGetIndex', NULL, 'fa fa-home', 0, 1, 0, 1, 6, '2023-02-27 02:12:35', NULL),
+(7, 'Lotes', 'Route', 'AdminLotesControllerGetIndex', NULL, 'fa fa-file', 0, 1, 0, 1, 7, '2023-02-27 03:23:22', NULL);
 
 -- --------------------------------------------------------
 
@@ -238,7 +252,8 @@ INSERT INTO `cms_menus_privileges` (`id`, `id_cms_menus`, `id_cms_privileges`) V
 (5, 3, 1),
 (6, 4, 1),
 (7, 5, 1),
-(8, 6, 1);
+(8, 6, 1),
+(9, 7, 1);
 
 -- --------------------------------------------------------
 
@@ -281,7 +296,8 @@ INSERT INTO `cms_moduls` (`id`, `name`, `icon`, `path`, `table_name`, `controlle
 (14, 'Operadoras', 'fa fa-phone', 'operadoras', 'operadoras', 'AdminOperadorasController', 0, 0, '2023-02-24 19:34:20', NULL, NULL),
 (15, 'Sucursales', 'fa fa-industry', 'sucursales', 'sucursales', 'AdminSucursalesController', 0, 0, '2023-02-24 20:08:05', NULL, NULL),
 (16, 'Estatus', 'fa fa-list-alt', 'status', 'status', 'AdminStatusController', 0, 0, '2023-02-27 01:31:42', NULL, NULL),
-(17, 'Almacenes', 'fa fa-home', 'almacenes', 'almacenes', 'AdminAlmacenesController', 0, 0, '2023-02-27 02:12:35', NULL, NULL);
+(17, 'Almacenes', 'fa fa-home', 'almacenes', 'almacenes', 'AdminAlmacenesController', 0, 0, '2023-02-27 02:12:35', NULL, NULL),
+(18, 'Lotes', 'fa fa-file', 'lotes', 'lotes', 'AdminLotesController', 0, 0, '2023-02-27 03:23:21', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -361,7 +377,8 @@ INSERT INTO `cms_privileges_roles` (`id`, `is_visible`, `is_create`, `is_read`, 
 (14, 1, 1, 1, 1, 1, 1, 14, NULL, NULL),
 (15, 1, 1, 1, 1, 1, 1, 15, NULL, NULL),
 (16, 1, 1, 1, 1, 1, 1, 16, NULL, NULL),
-(17, 1, 1, 1, 1, 1, 1, 17, NULL, NULL);
+(17, 1, 1, 1, 1, 1, 1, 17, NULL, NULL),
+(18, 1, 1, 1, 1, 1, 1, 18, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -500,11 +517,19 @@ CREATE TABLE `historicos_sim` (
 
 CREATE TABLE `lotes` (
   `id` int(11) NOT NULL,
-  `fecha_lote` datetime DEFAULT NULL,
   `descripcion` varchar(255) COLLATE utf8mb4_spanish_ci DEFAULT NULL,
   `sucursales_id` int(11) DEFAULT NULL,
-  `operadoras_id` int(11) DEFAULT NULL
+  `operadoras_id` int(11) DEFAULT NULL,
+  `paises_id` int(11) DEFAULT NULL,
+  `fecha_lote` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci ROW_FORMAT=DYNAMIC;
+
+--
+-- Volcado de datos para la tabla `lotes`
+--
+
+INSERT INTO `lotes` (`id`, `descripcion`, `sucursales_id`, `operadoras_id`, `paises_id`, `fecha_lote`) VALUES
+(2, 'Lote Febrero 1', 1, 1, 1, '2023-02-16');
 
 -- --------------------------------------------------------
 
@@ -571,7 +596,10 @@ CREATE TABLE `operadoras` (
 --
 
 INSERT INTO `operadoras` (`id`, `descripcion`, `prefijos`, `paises_id`) VALUES
-(1, 'Movilnet', '0416/0426', 1);
+(1, 'Movilnet', '0416/0426', 1),
+(2, 'Movistar', '0414/0424', 1),
+(3, 'Digitel', '0412', 1),
+(4, 'Vivo', '1569/1556', 2);
 
 -- --------------------------------------------------------
 
@@ -589,7 +617,8 @@ CREATE TABLE `paises` (
 --
 
 INSERT INTO `paises` (`id`, `descripcion`) VALUES
-(1, 'Venezuela');
+(1, 'Venezuela'),
+(2, 'Brazil');
 
 -- --------------------------------------------------------
 
@@ -872,7 +901,8 @@ ALTER TABLE `historicos_sim`
 ALTER TABLE `lotes`
   ADD PRIMARY KEY (`id`) USING BTREE,
   ADD KEY `sucursales_id` (`sucursales_id`) USING BTREE,
-  ADD KEY `operadoras_id` (`operadoras_id`) USING BTREE;
+  ADD KEY `operadoras_id` (`operadoras_id`) USING BTREE,
+  ADD KEY `paises_id` (`paises_id`);
 
 --
 -- Indices de la tabla `migrations`
@@ -998,25 +1028,25 @@ ALTER TABLE `cms_email_templates`
 -- AUTO_INCREMENT de la tabla `cms_logs`
 --
 ALTER TABLE `cms_logs`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT de la tabla `cms_menus`
 --
 ALTER TABLE `cms_menus`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `cms_menus_privileges`
 --
 ALTER TABLE `cms_menus_privileges`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `cms_moduls`
 --
 ALTER TABLE `cms_moduls`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT de la tabla `cms_notifications`
@@ -1034,7 +1064,7 @@ ALTER TABLE `cms_privileges`
 -- AUTO_INCREMENT de la tabla `cms_privileges_roles`
 --
 ALTER TABLE `cms_privileges_roles`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT de la tabla `cms_settings`
@@ -1070,7 +1100,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT de la tabla `lotes`
 --
 ALTER TABLE `lotes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `migrations`
@@ -1082,13 +1112,13 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT de la tabla `operadoras`
 --
 ALTER TABLE `operadoras`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `paises`
 --
 ALTER TABLE `paises`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `personal_access_tokens`
@@ -1155,7 +1185,8 @@ ALTER TABLE `historicos_sim`
 --
 ALTER TABLE `lotes`
   ADD CONSTRAINT `lotes_ibfk_1` FOREIGN KEY (`sucursales_id`) REFERENCES `sucursales` (`id`),
-  ADD CONSTRAINT `lotes_ibfk_2` FOREIGN KEY (`operadoras_id`) REFERENCES `operadoras` (`id`);
+  ADD CONSTRAINT `lotes_ibfk_2` FOREIGN KEY (`operadoras_id`) REFERENCES `operadoras` (`id`),
+  ADD CONSTRAINT `lotes_ibfk_3` FOREIGN KEY (`paises_id`) REFERENCES `paises` (`id`);
 
 --
 -- Filtros para la tabla `operadoras`
