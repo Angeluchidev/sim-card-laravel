@@ -5,12 +5,12 @@
 	use DB;
 	use CRUDBooster;
 
-	class AdminSimCardsController extends \crocodicstudio\crudbooster\controllers\CBController {
+	class AdminHistoricosSimController extends \crocodicstudio\crudbooster\controllers\CBController {
 
 	    public function cbInit() {
 
 			# START CONFIGURATION DO NOT REMOVE THIS LINE
-			$this->title_field = "personas_id";
+			$this->title_field = "id";
 			$this->limit = "20";
 			$this->orderby = "id,desc";
 			$this->global_privilege = false;
@@ -25,45 +25,31 @@
 			$this->button_filter = true;
 			$this->button_import = false;
 			$this->button_export = false;
-			$this->table = "sim_cards";
+			$this->table = "historicos_sim";
 			# END CONFIGURATION DO NOT REMOVE THIS LINE
 
 			# START COLUMNS DO NOT REMOVE THIS LINE
 			$this->col = [];
-			$this->col[] = ["label"=>"Serial","name"=>"serial"];
-			$this->col[] = ["label"=>"Puk","name"=>"puk"];
-			$this->col[] = ["label"=>"Numero","name"=>"numero"];
-			$this->col[] = ["label"=>"Fecha Act","name"=>"fecha_act"];
-			$this->col[] = ["label"=>"Fecha Plan","name"=>"fecha_plan"];
-			$this->col[] = ["label"=>"Planes","name"=>"planes_id","join"=>"planes,id"];
-			$this->col[] = ["label"=>"Personas Id","name"=>"personas_id","join"=>"personas,nombres"];
+			$this->col[] = ["label"=>"Fecha Historico","name"=>"fecha_historico"];
+			$this->col[] = ["label"=>"Sim Cards Id","name"=>"sim_cards_id","join"=>"sim_cards,personas_id"];
+			$this->col[] = ["label"=>"Status Id","name"=>"status_id","join"=>"status,descripcion"];
+			$this->col[] = ["label"=>"Almacenes Id","name"=>"almacenes_id","join"=>"almacenes,descripcion"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
-			$this->form[] = ['label'=>'Serial','name'=>'serial','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-4'];
-			//$this->form[] = ['label'=>'Pin','name'=>'cod_pin','type'=>'number','validation'=>'integer|required','width'=>'col-sm-2'];
-			$this->form[] = ['label'=>'Pin','name'=>'cod_pin','type'=>'number','validation'=>'required|integer|min:0','width'=>'col-sm-2'];
-			$this->form[] = ['label'=>'Puk','name'=>'puk','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-3'];
-			$this->form[] = ['label'=>'Numero','name'=>'numero','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-4'];
-			$this->form[] = ['label'=>'Fecha de Activación','name'=>'fecha_act','type'=>'date','validation'=>'required|date_format:Y-m-d','width'=>'col-sm-2'];
-			$this->form[] = ['label'=>'Fecha de Plan','name'=>'fecha_plan','type'=>'date','validation'=>'required|date_format:Y-m-d','width'=>'col-sm-2'];
-			$this->form[] = ['label'=>'Plan','name'=>'planes_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-4','datatable'=>'planes,descripcion'];
-			$this->form[] = ['label'=>'Persona','name'=>'personas_id','type'=>'datamodal','datamodal_table'=>'personas','datamodal_where'=>'','datamodal_columns'=>'ci,nombres,apellidos','datamodal_columns_alias'=>'Cedula,Nombres,Apellidos','required'=>true];
-			$this->form[] = ['label'=>'Lotes Id','name'=>'lotes_id','type'=>'hidden','validation'=>'required|integer|min:0','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Fecha Historico','name'=>'fecha_historico','type'=>'date','validation'=>'required|date','width'=>'col-sm-3'];
+			$this->form[] = ['label'=>'Status Id','name'=>'status_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-4','datatable'=>'status,descripcion'];
+			$this->form[] = ['label'=>'Almacenes Id','name'=>'almacenes_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-4','datatable'=>'almacenes,descripcion'];
+			$this->form[] = ['label'=>'Sim Cards Id','name'=>'sim_cards_id','type'=>'hidden','validation'=>'required|integer|min:0','width'=>'col-sm-10'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
 			//$this->form = [];
-			//$this->form[] = ["label"=>"Serial","name"=>"serial","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
-			//$this->form[] = ["label"=>"Pin","name"=>"pin","type"=>"password","required"=>TRUE,"validation"=>"min:3|max:32","help"=>"Mínimo 5 caracteres. Deja este campo vacio si no solicitaste un cambio de contraseña."];
-			//$this->form[] = ["label"=>"Puk","name"=>"puk","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
-			//$this->form[] = ["label"=>"Numero","name"=>"numero","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
-			//$this->form[] = ["label"=>"Fecha Act","name"=>"fecha_act","type"=>"datetime","required"=>TRUE,"validation"=>"required|date_format:Y-m-d H:i:s"];
-			//$this->form[] = ["label"=>"Fecha Plan","name"=>"fecha_plan","type"=>"datetime","required"=>TRUE,"validation"=>"required|date_format:Y-m-d H:i:s"];
-			//$this->form[] = ["label"=>"Planes Id","name"=>"planes_id","type"=>"select2","required"=>TRUE,"validation"=>"required|integer|min:0","datatable"=>"planes,id"];
-			//$this->form[] = ["label"=>"Personas Id","name"=>"personas_id","type"=>"select2","required"=>TRUE,"validation"=>"required|integer|min:0","datatable"=>"personas,id"];
-			//$this->form[] = ["label"=>"Lotes Id","name"=>"lotes_id","type"=>"select2","required"=>TRUE,"validation"=>"required|integer|min:0","datatable"=>"lotes,id"];
+			//$this->form[] = ["label"=>"Fecha Historico","name"=>"fecha_historico","type"=>"datetime","required"=>TRUE,"validation"=>"required|date_format:Y-m-d H:i:s"];
+			//$this->form[] = ["label"=>"Sim Cards Id","name"=>"sim_cards_id","type"=>"select2","required"=>TRUE,"validation"=>"required|integer|min:0","datatable"=>"sim_cards,personas_id"];
+			//$this->form[] = ["label"=>"Status Id","name"=>"status_id","type"=>"select2","required"=>TRUE,"validation"=>"required|integer|min:0","datatable"=>"status,id"];
+			//$this->form[] = ["label"=>"Almacenes Id","name"=>"almacenes_id","type"=>"select2","required"=>TRUE,"validation"=>"required|integer|min:0","datatable"=>"almacenes,id"];
 			# OLD END FORM
 
 			/* 
@@ -79,8 +65,6 @@
 	        | 
 	        */
 	        $this->sub_module = array();
-			$this->sub_module[] = ['label'=>'Recargas','path'=>'recargas','parent_columns'=>'serial,numero','foreign_key'=>'sim_cards_id','button_color'=>'success','button_icon'=>'fa fa-bars'];
-			$this->sub_module[] = ['label'=>'Historicos','path'=>'historicos_sim','parent_columns'=>'serial,numero','foreign_key'=>'sim_cards_id','button_color'=>'success','button_icon'=>'fa fa-bars'];
 
 
 	        /* 

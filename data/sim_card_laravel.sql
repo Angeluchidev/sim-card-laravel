@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 28-02-2023 a las 16:00:39
+-- Tiempo de generación: 28-02-2023 a las 17:14:10
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 7.4.27
 
@@ -201,7 +201,19 @@ INSERT INTO `cms_logs` (`id`, `ipaddress`, `useragent`, `url`, `description`, `d
 (34, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/sim_cards/add-save', 'Añadir nueva información 1 en Sim Cards', '', 1, '2023-02-27 21:01:49', NULL),
 (35, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/sim_cards/add-save', 'Añadir nueva información 1 en Sim Cards', '', 1, '2023-02-27 21:07:57', NULL),
 (36, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/login', 'Ingreso de admin@crudbooster.com desde la Dirección IP 127.0.0.1', '', 1, '2023-02-28 17:40:37', NULL),
-(37, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/recargas/add-save', 'Añadir nueva información  en Recargas', '', 1, '2023-02-28 18:47:00', NULL);
+(37, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/recargas/add-save', 'Añadir nueva información  en Recargas', '', 1, '2023-02-28 18:47:00', NULL),
+(38, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/historicos_sim/add-save', 'Añadir nueva información  en Historicos Sim Card', '', 1, '2023-02-28 19:42:37', NULL),
+(39, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/historicos_sim/add-save', 'Añadir nueva información  en Historicos Sim Card', '', 1, '2023-02-28 19:43:12', NULL),
+(40, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/users/add-save', 'Añadir nueva información Angel Briceño en Users Management', '', 1, '2023-02-28 20:01:22', NULL),
+(41, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/login', 'Ingreso de angeluchi.dev@gmail.com desde la Dirección IP 127.0.0.1', '', 2, '2023-02-28 20:02:01', NULL),
+(42, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/menu_management/edit-save/1', 'Actualizar información Planes en Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody></tbody></table>', 1, '2023-02-28 20:02:38', NULL),
+(43, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/menu_management/edit-save/2', 'Actualizar información Países en Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>sorting</td><td>2</td><td></td></tr></tbody></table>', 1, '2023-02-28 20:03:13', NULL),
+(44, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/menu_management/edit-save/3', 'Actualizar información Operadoras en Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td></td><td>normal</td></tr><tr><td>sorting</td><td>3</td><td></td></tr></tbody></table>', 1, '2023-02-28 20:03:22', NULL),
+(45, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/menu_management/edit-save/4', 'Actualizar información Sucursales en Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td></td><td>normal</td></tr><tr><td>sorting</td><td>4</td><td></td></tr></tbody></table>', 1, '2023-02-28 20:04:00', NULL),
+(46, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/menu_management/edit-save/5', 'Actualizar información Estatus en Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td></td><td>normal</td></tr><tr><td>sorting</td><td>5</td><td></td></tr></tbody></table>', 1, '2023-02-28 20:07:52', NULL),
+(47, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/menu_management/edit-save/6', 'Actualizar información Almacenes en Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td></td><td>normal</td></tr><tr><td>sorting</td><td>6</td><td></td></tr></tbody></table>', 1, '2023-02-28 20:08:06', NULL),
+(48, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/menu_management/edit-save/9', 'Actualizar información Personas en Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td></td><td>normal</td></tr><tr><td>sorting</td><td>7</td><td></td></tr></tbody></table>', 1, '2023-02-28 20:08:31', NULL),
+(49, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/menu_management/edit-save/7', 'Actualizar información Lotes en Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>color</td><td></td><td>normal</td></tr><tr><td>sorting</td><td>8</td><td></td></tr></tbody></table>', 1, '2023-02-28 20:08:39', NULL);
 
 -- --------------------------------------------------------
 
@@ -230,16 +242,17 @@ CREATE TABLE `cms_menus` (
 --
 
 INSERT INTO `cms_menus` (`id`, `name`, `type`, `path`, `color`, `icon`, `parent_id`, `is_active`, `is_dashboard`, `id_cms_privileges`, `sorting`, `created_at`, `updated_at`) VALUES
-(1, 'Planes', 'Route', 'AdminPlanesControllerGetIndex', 'normal', 'fa fa-star', 0, 1, 0, 1, 1, '2023-02-23 15:07:39', '2023-02-23 15:34:58'),
-(2, 'Países', 'Route', 'AdminPaisesControllerGetIndex', 'normal', 'fa fa-flag', 0, 1, 0, 1, 2, '2023-02-24 19:10:04', '2023-02-24 19:11:55'),
-(3, 'Operadoras', 'Route', 'AdminOperadorasControllerGetIndex', NULL, 'fa fa-phone', 0, 1, 0, 1, 3, '2023-02-24 19:34:21', NULL),
-(4, 'Sucursales', 'Route', 'AdminSucursalesControllerGetIndex', NULL, 'fa fa-industry', 0, 1, 0, 1, 4, '2023-02-24 20:08:05', NULL),
-(5, 'Estatus', 'Route', 'AdminStatusControllerGetIndex', NULL, 'fa fa-list-alt', 0, 1, 0, 1, 5, '2023-02-27 01:31:43', NULL),
-(6, 'Almacenes', 'Route', 'AdminAlmacenesControllerGetIndex', NULL, 'fa fa-home', 0, 1, 0, 1, 6, '2023-02-27 02:12:35', NULL),
-(7, 'Lotes', 'Route', 'AdminLotesControllerGetIndex', NULL, 'fa fa-file', 0, 1, 0, 1, 8, '2023-02-27 03:23:22', NULL),
-(8, 'Sim Cards', 'Route', 'AdminSimCardsControllerGetIndex', 'normal', 'fa fa-glass', 0, 0, 0, 1, 8, '2023-02-27 18:14:09', '2023-02-27 18:34:17'),
-(9, 'Personas', 'Route', 'AdminPersonasControllerGetIndex', NULL, 'fa fa-glass', 0, 1, 0, 1, 7, '2023-02-27 20:59:48', NULL),
-(10, 'Recargas', 'Route', 'AdminRecargasControllerGetIndex', NULL, 'fa fa-money', 0, 1, 0, 1, 9, '2023-02-28 17:44:29', NULL);
+(1, 'Planes', 'Route', 'AdminPlanesControllerGetIndex', 'normal', 'fa fa-star', 0, 1, 0, 1, 1, '2023-02-23 15:07:39', '2023-02-28 20:02:38'),
+(2, 'Países', 'Route', 'AdminPaisesControllerGetIndex', 'normal', 'fa fa-flag', 0, 1, 0, 1, 2, '2023-02-24 19:10:04', '2023-02-28 20:03:13'),
+(3, 'Operadoras', 'Route', 'AdminOperadorasControllerGetIndex', 'normal', 'fa fa-phone', 0, 1, 0, 1, 3, '2023-02-24 19:34:21', '2023-02-28 20:03:22'),
+(4, 'Sucursales', 'Route', 'AdminSucursalesControllerGetIndex', 'normal', 'fa fa-industry', 0, 1, 0, 1, 4, '2023-02-24 20:08:05', '2023-02-28 20:03:59'),
+(5, 'Estatus', 'Route', 'AdminStatusControllerGetIndex', 'normal', 'fa fa-list-alt', 0, 1, 0, 1, 5, '2023-02-27 01:31:43', '2023-02-28 20:07:52'),
+(6, 'Almacenes', 'Route', 'AdminAlmacenesControllerGetIndex', 'normal', 'fa fa-home', 0, 1, 0, 1, 6, '2023-02-27 02:12:35', '2023-02-28 20:08:06'),
+(7, 'Lotes', 'Route', 'AdminLotesControllerGetIndex', 'normal', 'fa fa-file', 0, 1, 0, 1, 8, '2023-02-27 03:23:22', '2023-02-28 20:08:38'),
+(8, 'Sim Cards', 'Route', 'AdminSimCardsControllerGetIndex', 'normal', 'fa fa-glass', 0, 0, 0, 1, 1, '2023-02-27 18:14:09', '2023-02-27 18:34:17'),
+(9, 'Personas', 'Route', 'AdminPersonasControllerGetIndex', 'normal', 'fa fa-glass', 0, 1, 0, 1, 7, '2023-02-27 20:59:48', '2023-02-28 20:08:30'),
+(10, 'Recargas', 'Route', 'AdminRecargasControllerGetIndex', NULL, 'fa fa-money', 0, 0, 0, 1, 2, '2023-02-28 17:44:29', NULL),
+(11, 'Historicos Sim Card', 'Route', 'AdminHistoricosSimControllerGetIndex', NULL, 'fa fa-glass', 0, 0, 0, 1, 3, '2023-02-28 19:26:27', NULL);
 
 -- --------------------------------------------------------
 
@@ -258,16 +271,25 @@ CREATE TABLE `cms_menus_privileges` (
 --
 
 INSERT INTO `cms_menus_privileges` (`id`, `id_cms_menus`, `id_cms_privileges`) VALUES
-(2, 1, 1),
-(4, 2, 1),
-(5, 3, 1),
-(6, 4, 1),
-(7, 5, 1),
-(8, 6, 1),
-(9, 7, 1),
 (11, 8, 1),
-(12, 9, 1),
-(13, 10, 1);
+(13, 10, 1),
+(14, 11, 1),
+(15, 1, 2),
+(16, 1, 1),
+(17, 2, 2),
+(18, 2, 1),
+(19, 3, 2),
+(20, 3, 1),
+(21, 4, 2),
+(22, 4, 1),
+(23, 5, 2),
+(24, 5, 1),
+(25, 6, 2),
+(26, 6, 1),
+(27, 9, 2),
+(28, 9, 1),
+(29, 7, 2),
+(30, 7, 1);
 
 -- --------------------------------------------------------
 
@@ -314,7 +336,8 @@ INSERT INTO `cms_moduls` (`id`, `name`, `icon`, `path`, `table_name`, `controlle
 (18, 'Lotes', 'fa fa-file', 'lotes', 'lotes', 'AdminLotesController', 0, 0, '2023-02-27 03:23:21', NULL, NULL),
 (19, 'Sim Cards', 'fa fa-glass', 'sim_cards', 'sim_cards', 'AdminSimCardsController', 0, 0, '2023-02-27 18:14:08', NULL, NULL),
 (20, 'Personas', 'fa fa-glass', 'personas', 'personas', 'AdminPersonasController', 0, 0, '2023-02-27 20:59:48', NULL, NULL),
-(21, 'Recargas', 'fa fa-money', 'recargas', 'recargas', 'AdminRecargasController', 0, 0, '2023-02-28 17:44:29', NULL, NULL);
+(21, 'Recargas', 'fa fa-money', 'recargas', 'recargas', 'AdminRecargasController', 0, 0, '2023-02-28 17:44:29', NULL, NULL),
+(22, 'Historicos Sim Card', 'fa fa-glass', 'historicos_sim', 'historicos_sim', 'AdminHistoricosSimController', 0, 0, '2023-02-28 19:26:27', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -352,7 +375,8 @@ CREATE TABLE `cms_privileges` (
 --
 
 INSERT INTO `cms_privileges` (`id`, `name`, `is_superadmin`, `theme_color`, `created_at`, `updated_at`) VALUES
-(1, 'Super Administrator', 1, 'skin-red', '2023-02-23 14:10:11', NULL);
+(1, 'Super Administrator', 1, 'skin-red', '2023-02-23 14:10:11', NULL),
+(2, 'Administrador', 0, 'skin-red', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -398,7 +422,20 @@ INSERT INTO `cms_privileges_roles` (`id`, `is_visible`, `is_create`, `is_read`, 
 (18, 1, 1, 1, 1, 1, 1, 18, NULL, NULL),
 (19, 1, 1, 1, 1, 1, 1, 19, NULL, NULL),
 (20, 1, 1, 1, 1, 1, 1, 20, NULL, NULL),
-(21, 1, 1, 1, 1, 1, 1, 21, NULL, NULL);
+(21, 1, 1, 1, 1, 1, 1, 21, NULL, NULL),
+(22, 1, 1, 1, 1, 1, 1, 22, NULL, NULL),
+(23, 1, 1, 1, 1, 1, 2, 17, NULL, NULL),
+(24, 1, 1, 1, 1, 1, 2, 16, NULL, NULL),
+(25, 1, 1, 1, 1, 1, 2, 22, NULL, NULL),
+(26, 1, 1, 1, 1, 1, 2, 18, NULL, NULL),
+(27, 1, 1, 1, 1, 1, 2, 14, NULL, NULL),
+(28, 1, 1, 1, 1, 1, 2, 13, NULL, NULL),
+(29, 1, 1, 1, 1, 1, 2, 20, NULL, NULL),
+(30, 1, 1, 1, 1, 1, 2, 12, NULL, NULL),
+(31, 1, 1, 1, 1, 1, 2, 21, NULL, NULL),
+(32, 1, 1, 1, 1, 1, 2, 19, NULL, NULL),
+(33, 1, 1, 1, 1, 1, 2, 15, NULL, NULL),
+(34, 1, 1, 1, 1, 1, 2, 4, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -497,7 +534,8 @@ CREATE TABLE `cms_users` (
 --
 
 INSERT INTO `cms_users` (`id`, `name`, `photo`, `email`, `password`, `id_cms_privileges`, `created_at`, `updated_at`, `status`) VALUES
-(1, 'Super Admin', 'uploads/1/2023-02/99bb7520c30f3f711f6d46e81dc7bfd3.png', 'admin@crudbooster.com', '$2y$10$6BjhDfYkCQ.yXDXACey49eUgIGrvt.NEggS.1VZJzZSN5x2pR81dS', 1, '2023-02-23 14:10:10', '2023-02-27 01:48:05', 'Active');
+(1, 'Super Admin', 'uploads/1/2023-02/99bb7520c30f3f711f6d46e81dc7bfd3.png', 'admin@crudbooster.com', '$2y$10$6BjhDfYkCQ.yXDXACey49eUgIGrvt.NEggS.1VZJzZSN5x2pR81dS', 1, '2023-02-23 14:10:10', '2023-02-27 01:48:05', 'Active'),
+(2, 'Angel Briceño', 'uploads/1/2023-02/perfil_angel_recorte.jpg', 'angeluchi.dev@gmail.com', '$2y$10$5dKPGD65lZ2p.CmlpTDsJuuwRI/BxPxtfw3Q4PP8qzZjNWMfBUc0K', 2, '2023-02-28 20:01:22', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -523,11 +561,19 @@ CREATE TABLE `failed_jobs` (
 
 CREATE TABLE `historicos_sim` (
   `id` int(11) NOT NULL,
-  `fecha_historico` datetime NOT NULL,
+  `fecha_historico` date NOT NULL,
   `sim_cards_id` int(11) NOT NULL,
   `status_id` int(11) NOT NULL,
   `almacenes_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci ROW_FORMAT=DYNAMIC;
+
+--
+-- Volcado de datos para la tabla `historicos_sim`
+--
+
+INSERT INTO `historicos_sim` (`id`, `fecha_historico`, `sim_cards_id`, `status_id`, `almacenes_id`) VALUES
+(1, '2023-02-25', 2, 1, 1),
+(2, '2023-02-28', 2, 3, 1);
 
 -- --------------------------------------------------------
 
@@ -1070,25 +1116,25 @@ ALTER TABLE `cms_email_templates`
 -- AUTO_INCREMENT de la tabla `cms_logs`
 --
 ALTER TABLE `cms_logs`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 
 --
 -- AUTO_INCREMENT de la tabla `cms_menus`
 --
 ALTER TABLE `cms_menus`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de la tabla `cms_menus_privileges`
 --
 ALTER TABLE `cms_menus_privileges`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT de la tabla `cms_moduls`
 --
 ALTER TABLE `cms_moduls`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT de la tabla `cms_notifications`
@@ -1100,13 +1146,13 @@ ALTER TABLE `cms_notifications`
 -- AUTO_INCREMENT de la tabla `cms_privileges`
 --
 ALTER TABLE `cms_privileges`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `cms_privileges_roles`
 --
 ALTER TABLE `cms_privileges_roles`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT de la tabla `cms_settings`
@@ -1130,13 +1176,19 @@ ALTER TABLE `cms_statistic_components`
 -- AUTO_INCREMENT de la tabla `cms_users`
 --
 ALTER TABLE `cms_users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `historicos_sim`
+--
+ALTER TABLE `historicos_sim`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `lotes`
