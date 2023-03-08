@@ -31,25 +31,26 @@
 			# START COLUMNS DO NOT REMOVE THIS LINE
 			$this->col = [];
 			$this->col[] = ["label"=>"Serial","name"=>"serial"];
+			$this->col[] = ["label"=>"Pin","name"=>"cod_pin"];
 			$this->col[] = ["label"=>"Puk","name"=>"puk"];
 			$this->col[] = ["label"=>"Numero","name"=>"numero"];
 			$this->col[] = ["label"=>"Fecha Act","name"=>"fecha_act"];
 			$this->col[] = ["label"=>"Fecha Plan","name"=>"fecha_plan"];
-			$this->col[] = ["label"=>"Planes","name"=>"planes_id","join"=>"planes,id"];
+			$this->col[] = ["label"=>"Planes","name"=>"planes_id","join"=>"planes,descripcion"];
 			$this->col[] = ["label"=>"Personas Id","name"=>"personas_id","join"=>"personas,nombres"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
-			$this->form[] = ['label'=>'Serial','name'=>'serial','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-4'];
+			$this->form[] = ['label'=>'Serial','name'=>'serial','type'=>'text','validation'=>'required|min:1|max:255|unique:sim_cards,serial,'.CRUDBooster::getCurrentId(),'width'=>'col-sm-4'];
 			//$this->form[] = ['label'=>'Pin','name'=>'cod_pin','type'=>'number','validation'=>'integer|required','width'=>'col-sm-2'];
-			$this->form[] = ['label'=>'Pin','name'=>'cod_pin','type'=>'number','validation'=>'required|integer|min:0','width'=>'col-sm-2'];
-			$this->form[] = ['label'=>'Puk','name'=>'puk','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-3'];
-			$this->form[] = ['label'=>'Numero','name'=>'numero','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-4'];
-			$this->form[] = ['label'=>'Fecha de Activación','name'=>'fecha_act','type'=>'date','validation'=>'required|date_format:Y-m-d','width'=>'col-sm-2'];
-			$this->form[] = ['label'=>'Fecha de Plan','name'=>'fecha_plan','type'=>'date','validation'=>'required|date_format:Y-m-d','width'=>'col-sm-2'];
-			$this->form[] = ['label'=>'Plan','name'=>'planes_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-4','datatable'=>'planes,descripcion'];
-			$this->form[] = ['label'=>'Persona','name'=>'personas_id','type'=>'datamodal','datamodal_table'=>'personas','datamodal_where'=>'','datamodal_columns'=>'ci,nombres,apellidos','datamodal_columns_alias'=>'Cedula,Nombres,Apellidos','required'=>true];
+			$this->form[] = ['label'=>'Pin','name'=>'cod_pin','type'=>'text','validation'=>'min:1|max:255','width'=>'col-sm-2'];
+			$this->form[] = ['label'=>'Puk','name'=>'puk','type'=>'text','validation'=>'min:1|max:255','width'=>'col-sm-3'];
+			$this->form[] = ['label'=>'Numero','name'=>'numero','type'=>'text','validation'=>'min:1|max:255','width'=>'col-sm-4'];
+			$this->form[] = ['label'=>'Fecha de Activación','name'=>'fecha_act','type'=>'date','validation'=>'date_format:Y-m-d','width'=>'col-sm-2'];
+			$this->form[] = ['label'=>'Fecha de Plan','name'=>'fecha_plan','type'=>'date','validation'=>'date_format:Y-m-d','width'=>'col-sm-2'];
+			$this->form[] = ['label'=>'Plan','name'=>'planes_id','type'=>'select2','validation'=>'integer|min:0','width'=>'col-sm-4','datatable'=>'planes,descripcion'];
+			$this->form[] = ['label'=>'Persona','name'=>'personas_id','type'=>'datamodal','datamodal_table'=>'personas','datamodal_where'=>'','datamodal_columns'=>'ci,nombres,apellidos','datamodal_columns_alias'=>'Cedula,Nombres,Apellidos','required'=>false];
 			$this->form[] = ['label'=>'Lotes Id','name'=>'lotes_id','type'=>'hidden','validation'=>'required|integer|min:0','width'=>'col-sm-10'];
 			# END FORM DO NOT REMOVE THIS LINE
 
@@ -177,6 +178,7 @@
 	        |
 	        */
 	        $this->pre_index_html = null;
+			$this->pre_index_html = "<a href='http:/cargarlote' id='lotes' class='btn btn-sm btn-primary' title='Carga por lote'>Cargar lote desde xls</a><br>";
 	        
 	        
 	        
