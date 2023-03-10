@@ -5,11 +5,10 @@
 	use DB;
 	use CRUDBooster;
 
-	class AdminRecargasController extends \crocodicstudio\crudbooster\controllers\CBController {
+	class AdminVsimcardController extends \crocodicstudio\crudbooster\controllers\CBController {
 
 	    public function cbInit() {
-
-			# START CONFIGURATION DO NOT REMOVE THIS LINE
+	    	# START CONFIGURATION DO NOT REMOVE THIS LINE
 			$this->title_field = "id";
 			$this->limit = "20";
 			$this->orderby = "id,desc";
@@ -17,40 +16,50 @@
 			$this->button_table_action = true;
 			$this->button_bulk_action = false;
 			$this->button_action_style = "button_icon";
-			$this->button_add = true;
-			$this->button_edit = true;
-			$this->button_delete = true;
+			$this->button_add = false;
+			$this->button_edit = false;
+			$this->button_delete = false;
 			$this->button_detail = true;
 			$this->button_show = true;
 			$this->button_filter = true;
 			$this->button_import = false;
 			$this->button_export = false;
-			$this->table = "recargas";
+			$this->table = "sim_cards";
 			# END CONFIGURATION DO NOT REMOVE THIS LINE
 
-			# START COLUMNS DO NOT REMOVE THIS LINE
-			$this->col = [];
-			$this->col[] = ["label"=>"Fecha Recarga","name"=>"fecha_recarga"];
-			$this->col[] = ["label"=>"Monto Bs","name"=>"monto_bs"];
-			$this->col[] = ["label"=>"Equivalencia Usd","name"=>"equivalencia_usd"];
+	        $this->col = [];
+			$this->col[] = ["label"=>"Lote","name"=>"lotes_id","join"=>"lotes,descripcion"];
+			$this->col[] = ["label"=>"Serial","name"=>"serial"];
+			$this->col[] = ["label"=>"Pin","name"=>"cod_pin"];
+			$this->col[] = ["label"=>"Puk","name"=>"puk"];
+			$this->col[] = ["label"=>"Numero","name"=>"numero"];
+			$this->col[] = ["label"=>"Fecha Act","name"=>"fecha_act"];
+			$this->col[] = ["label"=>"Fecha Plan","name"=>"fecha_plan"];
+			$this->col[] = ["label"=>"Planes","name"=>"planes_id","join"=>"planes,plan"];
+			$this->col[] = ["label"=>"Persona","name"=>"personas_id","join"=>"personas,nombres"];
+			$this->col[] = ["label"=>"Recargas","name"=>"(SELECT 
+							group_concat(
+								'fecha:','&nbsp;',recargas.fecha_recarga,'/','&nbsp;','Monto:','&nbsp;',recargas.monto_bs,'&nbsp;','BS','/','&nbsp;',recargas.equivalencia_usd,'&nbsp;','$' SEPARATOR '<BR>'
+							)
+							FROM
+								recargas
+							where sim_cards_id = sim_cards.id) as Recargas"];
+			$this->col[] = ["label"=>"Historico","name"=>"(SELECT 
+							group_concat(
+								'fecha:','&nbsp;',historicos_sim.fecha_historico,'/','&nbsp;','Status:','&nbsp;',status.descripcion,'&nbsp;','/','Almacen:','&nbsp;',almacenes.descripcion SEPARATOR '<BR>'
+							)
+							FROM
+								historicos_sim
+								JOIN status ON historicos_sim.status_id = status.id
+								JOIN almacenes ON historicos_sim.almacenes_id = almacenes.id
+							where sim_cards_id = sim_cards.id) as Historico"];				
+
 			# END COLUMNS DO NOT REMOVE THIS LINE
-
 			# START FORM DO NOT REMOVE THIS LINE
-			$this->form = [];
-			//$this->form[] = ['label'=>'Fecha Recarga','name'=>'fecha_recarga','type'=>'datetime','validation'=>'required|date_format:Y-m-d H:i:s','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Fecha de Recarga','name'=>'fecha_recarga','type'=>'date','validation'=>'date','width'=>'col-sm-2','required'=>true];
-			$this->form[] = ['label'=>'Monto Bs','name'=>'monto_bs','type'=>'money','validation'=>'required|integer|min:0','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Equivalencia Usd','name'=>'equivalencia_usd','type'=>'money','validation'=>'required|integer|min:0','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Sim Cards Id','name'=>'sim_cards_id','type'=>'hidden','validation'=>'required|integer|min:0','width'=>'col-sm-10'];
-			# END FORM DO NOT REMOVE THIS LINE
+		$this->form = [];
+		
 
-			# OLD START FORM
-			//$this->form = [];
-			//$this->form[] = ["label"=>"Fecha Recarga","name"=>"fecha_recarga","type"=>"datetime","required"=>TRUE,"validation"=>"required|date_format:Y-m-d H:i:s"];
-			//$this->form[] = ["label"=>"Monto Bs","name"=>"monto_bs","type"=>"money","required"=>TRUE,"validation"=>"required|integer|min:0"];
-			//$this->form[] = ["label"=>"Equivalencia Usd","name"=>"equivalencia_usd","type"=>"money","required"=>TRUE,"validation"=>"required|integer|min:0"];
-			//$this->form[] = ["label"=>"Sim Cards Id","name"=>"sim_cards_id","type"=>"select2","required"=>TRUE,"validation"=>"required|integer|min:0","datatable"=>"sim_cards,personas_id"];
-			# OLD END FORM
+			# END FORM DO NOT REMOVE THIS LINE     
 
 			/* 
 	        | ---------------------------------------------------------------------- 
