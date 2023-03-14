@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5fbea6c78611881367b422bbac3ba50b",
+    "content-hash": "c3d41449a5c615f7001811bdc553ebb1",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2501,16 +2501,16 @@
         },
         {
             "name": "maatwebsite/excel",
-            "version": "3.1.47",
+            "version": "3.1.48",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SpartnerNL/Laravel-Excel.git",
-                "reference": "fd928d68a1422d6abce73255b4406b3c5659e197"
+                "reference": "6d0fe2a1d195960c7af7bf0de760582da02a34b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SpartnerNL/Laravel-Excel/zipball/fd928d68a1422d6abce73255b4406b3c5659e197",
-                "reference": "fd928d68a1422d6abce73255b4406b3c5659e197",
+                "url": "https://api.github.com/repos/SpartnerNL/Laravel-Excel/zipball/6d0fe2a1d195960c7af7bf0de760582da02a34b9",
+                "reference": "6d0fe2a1d195960c7af7bf0de760582da02a34b9",
                 "shasum": ""
             },
             "require": {
@@ -2565,7 +2565,7 @@
             ],
             "support": {
                 "issues": "https://github.com/SpartnerNL/Laravel-Excel/issues",
-                "source": "https://github.com/SpartnerNL/Laravel-Excel/tree/3.1.47"
+                "source": "https://github.com/SpartnerNL/Laravel-Excel/tree/3.1.48"
             },
             "funding": [
                 {
@@ -2577,7 +2577,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-02-16T15:09:07+00:00"
+            "time": "2023-02-22T21:01:38+00:00"
         },
         {
             "name": "maennchen/zipstream-php",
@@ -8104,6 +8104,69 @@
                 }
             ],
             "time": "2023-02-04T13:37:15+00:00"
+        },
+        {
+            "name": "reliese/laravel",
+            "version": "v1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/reliese/laravel.git",
+                "reference": "5e23e1661504db5d3b05a1196526236ef8b5172a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/reliese/laravel/zipball/5e23e1661504db5d3b05a1196526236ef8b5172a",
+                "reference": "5e23e1661504db5d3b05a1196526236ef8b5172a",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/dbal": ">=2.5",
+                "illuminate/console": ">=5.1",
+                "illuminate/contracts": ">=5.1",
+                "illuminate/database": ">=5.1",
+                "illuminate/filesystem": ">=5.1",
+                "illuminate/support": ">=5.1",
+                "php": "^7.3|^8.0"
+            },
+            "require-dev": {
+                "fzaninotto/faker": "~1.4",
+                "mockery/mockery": ">=1.4",
+                "phpunit/phpunit": "^9"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Reliese\\Coders\\CodersServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Reliese\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Cristian Llanos",
+                    "email": "cristianllanos@outlook.com"
+                }
+            ],
+            "description": "Reliese Components for Laravel Framework code generation.",
+            "homepage": "http://cristianllanos.com",
+            "keywords": [
+                "laravel",
+                "reliese"
+            ],
+            "support": {
+                "issues": "https://github.com/reliese/laravel/issues",
+                "source": "https://github.com/reliese/laravel"
+            },
+            "time": "2023-03-10T16:05:19+00:00"
         },
         {
             "name": "sebastian/cli-parser",

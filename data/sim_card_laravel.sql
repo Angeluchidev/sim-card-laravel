@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 10-03-2023 a las 03:50:40
+-- Tiempo de generación: 14-03-2023 a las 03:28:23
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 7.4.27
 
@@ -263,7 +263,14 @@ INSERT INTO `cms_logs` (`id`, `ipaddress`, `useragent`, `url`, `description`, `d
 (96, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/sim_cards/edit-save/9', 'Actualizar información 2 en Sim Cards', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>cod_pin</td><td></td><td></td></tr><tr><td>puk</td><td></td><td></td></tr><tr><td>planes_id</td><td></td><td>1</td></tr></tbody></table>', 1, '2023-03-10 06:32:17', NULL),
 (97, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/historicos_sim/add-save', 'Añadir nueva información  en Historicos Sim Card', '', 1, '2023-03-10 06:35:11', NULL),
 (98, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/logout', 'admin@crudbooster.com se desconectó', '', 1, '2023-03-10 06:41:26', NULL),
-(99, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/login', 'Ingreso de angeluchi.dev@gmail.com desde la Dirección IP 127.0.0.1', '', 2, '2023-03-10 06:41:48', NULL);
+(99, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/login', 'Ingreso de angeluchi.dev@gmail.com desde la Dirección IP 127.0.0.1', '', 2, '2023-03-10 06:41:48', NULL),
+(100, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/login', 'Ingreso de admin@crudbooster.com desde la Dirección IP 127.0.0.1', '', 1, '2023-03-12 22:54:27', NULL),
+(101, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://localhost/sim-card-laravel/public/admin/login', 'Ingreso de admin@crudbooster.com desde la Dirección IP ::1', '', 1, '2023-03-13 07:20:34', NULL),
+(102, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/login', 'Ingreso de admin@crudbooster.com desde la Dirección IP 127.0.0.1', '', 1, '2023-03-13 18:07:14', NULL),
+(103, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/login', 'Ingreso de admin@crudbooster.com desde la Dirección IP 127.0.0.1', '', 1, '2023-03-14 05:35:43', NULL),
+(104, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/lotes/add-save', 'Añadir nueva información  en Lotes', '', 1, '2023-03-14 05:45:45', NULL),
+(105, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/logout', 'admin@crudbooster.com se desconectó', '', 1, '2023-03-14 06:24:56', NULL),
+(106, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/login', 'Ingreso de angeluchi.dev@gmail.com desde la Dirección IP 127.0.0.1', '', 2, '2023-03-14 06:25:13', NULL);
 
 -- --------------------------------------------------------
 
@@ -305,7 +312,8 @@ INSERT INTO `cms_menus` (`id`, `name`, `type`, `path`, `color`, `icon`, `parent_
 (11, 'Historicos Sim Card', 'Route', 'AdminHistoricosSimControllerGetIndex', NULL, 'fa fa-glass', 0, 0, 0, 1, 3, '2023-02-28 19:26:27', NULL),
 (12, 'Usuarios', 'Module', 'users', 'normal', 'fa fa-user', 0, 1, 0, 1, 2, '2023-02-28 21:01:46', NULL),
 (13, 'Estadisticas', 'Statistic', 'statistic_builder/show/escritorio', 'normal', NULL, 0, 1, 1, 1, 1, '2023-03-08 10:44:16', '2023-03-08 10:44:44'),
-(14, 'Vista Sim card', 'Route', 'AdminVsimcardControllerGetIndex', 'normal', 'fa fa-glass', 0, 1, 0, 1, 11, '2023-03-10 01:11:39', '2023-03-10 05:22:42');
+(14, 'Vista Sim card', 'Route', 'AdminVsimcardControllerGetIndex', 'normal', 'fa fa-glass', 0, 1, 0, 1, 11, '2023-03-10 01:11:39', '2023-03-10 05:22:42'),
+(15, 'Importar Sim Cards', 'Route', 'AdminImportarSimCardsControllerGetIndex', NULL, 'fa fa-glass', 0, 1, 0, 1, 12, '2023-03-13 02:01:54', NULL);
 
 -- --------------------------------------------------------
 
@@ -347,7 +355,8 @@ INSERT INTO `cms_menus_privileges` (`id`, `id_cms_menus`, `id_cms_privileges`) V
 (33, 13, 2),
 (34, 13, 1),
 (36, 14, 2),
-(37, 14, 1);
+(37, 14, 1),
+(38, 15, 1);
 
 -- --------------------------------------------------------
 
@@ -396,7 +405,8 @@ INSERT INTO `cms_moduls` (`id`, `name`, `icon`, `path`, `table_name`, `controlle
 (20, 'Personas', 'fa fa-glass', 'personas', 'personas', 'AdminPersonasController', 0, 0, '2023-02-27 20:59:48', NULL, NULL),
 (21, 'Recargas', 'fa fa-money', 'recargas', 'recargas', 'AdminRecargasController', 0, 0, '2023-02-28 17:44:29', NULL, NULL),
 (22, 'Historicos Sim Card', 'fa fa-glass', 'historicos_sim', 'historicos_sim', 'AdminHistoricosSimController', 0, 0, '2023-02-28 19:26:27', NULL, NULL),
-(23, 'Vista Sim card', 'fa fa-glass', 'vsimcard', 'sim_cards', 'AdminVsimcardController', 0, 0, '2023-03-10 01:11:39', NULL, NULL);
+(23, 'Vista Sim card', 'fa fa-glass', 'vsimcard', 'sim_cards', 'AdminVsimcardController', 0, 0, '2023-03-10 01:11:39', NULL, NULL),
+(24, 'Importar Sim Cards', 'fa fa-glass', 'importar_sim_cards', 'sim_cards', 'AdminImportarSimCardsController', 0, 0, '2023-03-13 02:01:54', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -496,7 +506,8 @@ INSERT INTO `cms_privileges_roles` (`id`, `is_visible`, `is_create`, `is_read`, 
 (45, 1, 1, 1, 1, 1, 2, 19, NULL, NULL),
 (46, 1, 1, 1, 1, 1, 2, 15, NULL, NULL),
 (47, 1, 1, 1, 1, 1, 2, 4, NULL, NULL),
-(48, 1, 0, 0, 0, 0, 2, 23, NULL, NULL);
+(48, 1, 0, 0, 0, 0, 2, 23, NULL, NULL),
+(49, 1, 1, 1, 1, 1, 1, 24, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -676,7 +687,8 @@ CREATE TABLE `lotes` (
 
 INSERT INTO `lotes` (`id`, `descripcion`, `sucursales_id`, `operadoras_id`, `paises_id`, `fecha_lote`) VALUES
 (2, 'Lote Febrero 1', 1, 1, 1, '2023-02-16'),
-(3, 'primer lote movistar', 1, 2, 1, '2023-03-01');
+(3, 'primer lote movistar', 1, 2, 1, '2023-03-01'),
+(4, 'Lote febrero prueba Import', 1, 1, 1, '2023-03-03');
 
 -- --------------------------------------------------------
 
@@ -894,7 +906,81 @@ INSERT INTO `sim_cards` (`id`, `serial`, `cod_pin`, `puk`, `numero`, `fecha_act`
 (8, '0009', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2),
 (9, '00010', NULL, NULL, '04265988745', '2023-03-01', '2023-03-25', 1, 2, 3),
 (10, '00011', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2),
-(11, '00012', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2);
+(11, '00012', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2),
+(16, 'up001', 'pin001', NULL, NULL, NULL, NULL, NULL, NULL, 3),
+(17, 'up002', 'pin001', NULL, NULL, NULL, NULL, NULL, NULL, 3),
+(18, 'up003', 'pin001', NULL, NULL, NULL, NULL, NULL, NULL, 2),
+(19, 'up004', 'pin001', NULL, NULL, NULL, NULL, NULL, NULL, 2),
+(20, 'up003', 'pin001', NULL, NULL, NULL, NULL, NULL, NULL, 3),
+(21, 'up004', 'pin001', NULL, NULL, NULL, NULL, NULL, NULL, 3),
+(22, 'up005', 'pin001', NULL, NULL, NULL, NULL, NULL, NULL, 3),
+(23, 'up006', 'pin001', NULL, NULL, NULL, NULL, NULL, NULL, 3),
+(24, 'up005', 'pin001', NULL, NULL, NULL, NULL, NULL, NULL, 3),
+(25, 'up006', 'pin001', NULL, NULL, NULL, NULL, NULL, NULL, 3),
+(26, 'up005', 'pin001', NULL, NULL, NULL, NULL, NULL, NULL, 3),
+(27, 'up006', 'pin001', NULL, NULL, NULL, NULL, NULL, NULL, 3),
+(28, 'up005', 'pin001', NULL, NULL, NULL, NULL, NULL, NULL, 3),
+(29, 'up006', 'pin001', NULL, NULL, NULL, NULL, NULL, NULL, 3),
+(330, '8958060004605904473', NULL, '32615455', '4164201987', NULL, NULL, NULL, NULL, 4),
+(331, '8958060004605904408', NULL, '62589373', '4164079407', NULL, NULL, NULL, NULL, 4),
+(332, '8958060004605904622', NULL, '86006704', '4164020433', NULL, NULL, NULL, NULL, 4),
+(333, '8958060004605904630', NULL, '9234269', '4164208677', NULL, NULL, NULL, NULL, 4),
+(334, '8958060004605904648', NULL, '40766933', '4164124857', NULL, NULL, NULL, NULL, 4),
+(335, '8958060004605904788', NULL, '83691519', '4164264844', NULL, NULL, NULL, NULL, 4),
+(336, '8958060004605904457', NULL, '81284879', '4264104300', NULL, NULL, NULL, NULL, 4),
+(337, '8958060004605904440', NULL, '31140666', '4264114991', NULL, NULL, NULL, NULL, 4),
+(338, '8958060004605904432', NULL, '32589482', '4264119935', NULL, NULL, NULL, NULL, 4),
+(339, '8958060004605904424', NULL, '82151603', '4164254328', NULL, NULL, NULL, NULL, 4),
+(340, '8958060004605904390', NULL, '53956793', '4164129091', NULL, NULL, NULL, NULL, 4),
+(341, '8958060004605904374', NULL, '11815739', '4164173833', NULL, NULL, NULL, NULL, 4),
+(342, '8958060004605904234', NULL, '39346014', '4164221899', NULL, NULL, NULL, NULL, 4),
+(343, '8958060004605904481', NULL, '88651309', '4164082339', NULL, NULL, NULL, NULL, 4),
+(344, '8958060004605902741', NULL, '32089720', '4264106852', NULL, NULL, NULL, NULL, 4),
+(345, '8958060004605902725', NULL, '43406994', '4264115024', NULL, NULL, NULL, NULL, 4),
+(346, '8958060004605902782', NULL, '34297160', '4264100179', NULL, NULL, NULL, NULL, 4),
+(347, '8958060004605902790', NULL, '91352084', '4164144519', NULL, NULL, NULL, NULL, 4),
+(348, '8958060004605904515', NULL, '10666433', '4264109606', NULL, NULL, NULL, NULL, 4),
+(349, '8958060004605904507', NULL, '50677182', '4264100839', NULL, NULL, NULL, NULL, 4),
+(350, '8958060004605904499', NULL, '20570778', '4264101300', NULL, NULL, NULL, NULL, 4),
+(351, '8958060004605904770', NULL, '9224910', '4264700885', NULL, NULL, NULL, NULL, 4),
+(352, '8958060004605904762', NULL, '64327434', '4264107603', NULL, NULL, NULL, NULL, 4),
+(353, '8958060004605904754', NULL, '64672978', '4264119712', NULL, NULL, NULL, NULL, 4),
+(354, '8958060004605904366', NULL, '33433018', '4164025516', NULL, NULL, NULL, NULL, 4),
+(355, '8958060004605904341', NULL, '38366914', '4164082954', NULL, NULL, NULL, NULL, 4),
+(356, '8958060004605904606', NULL, '83727629', '4164001255', NULL, NULL, NULL, NULL, 4),
+(357, '8958060004605904358', NULL, '84400125', '4164019014', NULL, NULL, NULL, NULL, 4),
+(358, '8958060004605904739', NULL, '69085381', '4264107461', NULL, NULL, NULL, NULL, 4),
+(359, '8958060004605904382', NULL, '59688393', '4164220933', NULL, NULL, NULL, NULL, 4),
+(360, '8958060004605904333', NULL, '44785819', '4164185859', NULL, NULL, NULL, NULL, 4),
+(361, '8958060004605904325', NULL, '4103492', '4164066672', NULL, NULL, NULL, NULL, 4),
+(362, '8958060004605904242', NULL, '33600558', '4164042459', NULL, NULL, NULL, NULL, 4),
+(363, '8958060004605902881', NULL, '49843109', '4164229120', NULL, NULL, NULL, NULL, 4),
+(364, '8958060004605902873', NULL, '61792120', '4164250833', NULL, NULL, NULL, NULL, 4),
+(365, '8958060004605902758', NULL, '88268929', '4264114975', NULL, NULL, NULL, NULL, 4),
+(366, '8958060004605902857', NULL, '14696025', '4264113905', NULL, NULL, NULL, NULL, 4),
+(367, '8958060004605902816', NULL, '35126162', '4264116485', NULL, NULL, NULL, NULL, 4),
+(368, '8958060004605902865', NULL, '6475423', '4264116432', NULL, NULL, NULL, NULL, 4),
+(369, '8958060004605902840', NULL, '45130314', '4264105422', NULL, NULL, NULL, NULL, 4),
+(370, '8958060004605902832', NULL, '52056825', '4164273590', NULL, NULL, NULL, NULL, 4),
+(371, '8958060004605904580', NULL, '45848291', '4164029019', NULL, NULL, NULL, NULL, 4),
+(372, '8958060004605902824', NULL, '52210085', '4264105425', NULL, NULL, NULL, NULL, 4),
+(373, '8958060004605902808', NULL, '18187304', '4164116918', NULL, NULL, NULL, NULL, 4),
+(374, '8958060004605902766', NULL, '64366353', '4264100143', NULL, NULL, NULL, NULL, 4),
+(375, '8958060004605902733', NULL, '33740350', '4264115079', NULL, NULL, NULL, NULL, 4),
+(376, '8958060004605902998', NULL, '23734079', '4264119917', NULL, NULL, NULL, NULL, 4),
+(377, '8958060004605904465', NULL, '51945982', '4164261928', NULL, NULL, NULL, NULL, 4),
+(378, '8958060004605902899', NULL, '52961270', '4264105421', NULL, NULL, NULL, NULL, 4),
+(379, '8958060004605902709', NULL, '44902067', '4264116864', NULL, NULL, NULL, NULL, 4),
+(380, '8958060004605902717', NULL, '81882012', '4264116862', NULL, NULL, NULL, NULL, 4),
+(381, '8958060004605904531', NULL, '47149705', '4264107463', NULL, NULL, NULL, NULL, 4),
+(382, '8958060004605904556', NULL, '8154065', '4264701019', NULL, NULL, NULL, NULL, 4),
+(383, '8958060004605904564', NULL, '81427140', '4264700972', NULL, NULL, NULL, NULL, 4),
+(384, '8958060004605904572', NULL, '72457447', '4164240383', NULL, NULL, NULL, NULL, 4),
+(385, '8958060004605904614', NULL, '30641630', '4164062162', NULL, NULL, NULL, NULL, 4),
+(386, '8958060004605904523', NULL, '48102957', '4264100728', NULL, NULL, NULL, NULL, 4),
+(387, '8958060004605902774', NULL, '7969228', '4264105430', NULL, NULL, NULL, NULL, 4),
+(388, '8958060004605904549', NULL, '29494968', '4264111591', NULL, NULL, NULL, NULL, 4),
+(389, '8958060004605904598', NULL, '32706294', '4164019356', NULL, NULL, NULL, NULL, 4);
 
 -- --------------------------------------------------------
 
@@ -1240,25 +1326,25 @@ ALTER TABLE `cms_email_templates`
 -- AUTO_INCREMENT de la tabla `cms_logs`
 --
 ALTER TABLE `cms_logs`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=107;
 
 --
 -- AUTO_INCREMENT de la tabla `cms_menus`
 --
 ALTER TABLE `cms_menus`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT de la tabla `cms_menus_privileges`
 --
 ALTER TABLE `cms_menus_privileges`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT de la tabla `cms_moduls`
 --
 ALTER TABLE `cms_moduls`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT de la tabla `cms_notifications`
@@ -1276,7 +1362,7 @@ ALTER TABLE `cms_privileges`
 -- AUTO_INCREMENT de la tabla `cms_privileges_roles`
 --
 ALTER TABLE `cms_privileges_roles`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 
 --
 -- AUTO_INCREMENT de la tabla `cms_settings`
@@ -1318,7 +1404,7 @@ ALTER TABLE `historicos_sim`
 -- AUTO_INCREMENT de la tabla `lotes`
 --
 ALTER TABLE `lotes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `migrations`
@@ -1366,7 +1452,7 @@ ALTER TABLE `recargas`
 -- AUTO_INCREMENT de la tabla `sim_cards`
 --
 ALTER TABLE `sim_cards`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=390;
 
 --
 -- AUTO_INCREMENT de la tabla `status`

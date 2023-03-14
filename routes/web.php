@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/infolaravel', function () {
     return view('welcome');
 });
+
+
+Route::post('/upload-sim-cards', 'App\Http\Controllers\AdminImportarSimCardsController@uploadSimCards')->name('upload');
+Route::get('/import-sim-cards', 'App\Http\Controllers\AdminImportarSimCardsController@getIndex')->name('import');
