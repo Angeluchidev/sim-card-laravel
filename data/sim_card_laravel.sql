@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-03-2023 a las 17:28:35
+-- Tiempo de generación: 19-03-2023 a las 19:42:28
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 7.4.27
 
@@ -3316,7 +3316,13 @@ INSERT INTO `cms_logs` (`id`, `ipaddress`, `useragent`, `url`, `description`, `d
 (131, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/recargas/add-save', 'Añadir nueva información  en Recargas', '', 2, '2023-03-19 17:50:48', NULL),
 (132, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/recargas/add-save', 'Añadir nueva información  en Recargas', '', 2, '2023-03-19 17:57:57', NULL),
 (133, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/recargas/add-save', 'Añadir nueva información  en Recargas', '', 2, '2023-03-19 18:00:02', NULL),
-(134, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/vsimcard/edit/389,8958060004605904598', 'Intentar editar 389 en Vista Sim card', '', 2, '2023-03-19 19:08:22', NULL);
+(134, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/vsimcard/edit/389,8958060004605904598', 'Intentar editar 389 en Vista Sim card', '', 2, '2023-03-19 19:08:22', NULL),
+(135, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/historicos_sim/add-save', 'Añadir nueva información  en Historicos Sim Card', '', 2, '2023-03-19 22:02:45', NULL),
+(136, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/logout', 'angeluchi.dev@gmail.com se desconectó', '', 2, '2023-03-19 22:17:01', NULL),
+(137, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/login', 'Ingreso de admin@crudbooster.com desde la Dirección IP 127.0.0.1', '', 1, '2023-03-19 22:17:04', NULL),
+(138, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/menu_management/edit-save/14', 'Actualizar información Vista Sim card en Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>icon</td><td>fa fa-glass</td><td>fa fa-credit-card</td></tr><tr><td>sorting</td><td>11</td><td></td></tr></tbody></table>', 1, '2023-03-19 22:18:27', NULL),
+(139, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/menu_management/edit-save/15', 'Actualizar información Importar Sim Cards en Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>icon</td><td>fa fa-glass</td><td>fa fa-upload</td></tr><tr><td>sorting</td><td>12</td><td></td></tr></tbody></table>', 1, '2023-03-19 22:20:56', NULL),
+(140, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36', 'http://127.0.0.1:8000/admin/menu_management/edit-save/9', 'Actualizar información Personas en Menu Management', '<table class=\"table table-striped\"><thead><tr><th>Key</th><th>Old Value</th><th>New Value</th></thead><tbody><tr><td>icon</td><td>fa fa-glass</td><td>fa fa-users</td></tr><tr><td>sorting</td><td>9</td><td></td></tr></tbody></table>', 1, '2023-03-19 22:21:38', NULL);
 
 -- --------------------------------------------------------
 
@@ -3353,13 +3359,13 @@ INSERT INTO `cms_menus` (`id`, `name`, `type`, `path`, `color`, `icon`, `parent_
 (6, 'Almacenes', 'Route', 'AdminAlmacenesControllerGetIndex', 'normal', 'fa fa-home', 0, 1, 0, 1, 8, '2023-02-27 02:12:35', '2023-02-28 20:08:06'),
 (7, 'Lotes', 'Route', 'AdminLotesControllerGetIndex', 'normal', 'fa fa-file', 0, 1, 0, 1, 10, '2023-02-27 03:23:22', '2023-02-28 20:08:38'),
 (8, 'Sim Cards', 'Route', 'AdminSimCardsControllerGetIndex', 'normal', 'fa fa-glass', 0, 0, 0, 1, 1, '2023-02-27 18:14:09', '2023-02-27 18:34:17'),
-(9, 'Personas', 'Route', 'AdminPersonasControllerGetIndex', 'normal', 'fa fa-glass', 0, 1, 0, 1, 9, '2023-02-27 20:59:48', '2023-02-28 20:08:30'),
+(9, 'Personas', 'Route', 'AdminPersonasControllerGetIndex', 'normal', 'fa fa-users', 0, 1, 0, 1, 9, '2023-02-27 20:59:48', '2023-03-19 22:21:38'),
 (10, 'Recargas', 'Route', 'AdminRecargasControllerGetIndex', NULL, 'fa fa-money', 0, 0, 0, 1, 2, '2023-02-28 17:44:29', NULL),
 (11, 'Historicos Sim Card', 'Route', 'AdminHistoricosSimControllerGetIndex', NULL, 'fa fa-glass', 0, 0, 0, 1, 3, '2023-02-28 19:26:27', NULL),
 (12, 'Usuarios', 'Module', 'users', 'normal', 'fa fa-user', 0, 1, 0, 1, 2, '2023-02-28 21:01:46', NULL),
 (13, 'Estadisticas', 'Statistic', 'statistic_builder/show/escritorio', 'normal', NULL, 0, 1, 1, 1, 1, '2023-03-08 10:44:16', '2023-03-08 10:44:44'),
-(14, 'Vista Sim card', 'Route', 'AdminVsimcardControllerGetIndex', 'normal', 'fa fa-glass', 0, 1, 0, 1, 11, '2023-03-10 01:11:39', '2023-03-19 05:58:54'),
-(15, 'Importar Sim Cards', 'Route', 'AdminImportarSimCardsControllerGetIndex', 'normal', 'fa fa-glass', 0, 1, 0, 1, 12, '2023-03-13 02:01:54', '2023-03-19 06:02:00');
+(14, 'Vista Sim card', 'Route', 'AdminVsimcardControllerGetIndex', 'normal', 'fa fa-credit-card', 0, 1, 0, 1, 11, '2023-03-10 01:11:39', '2023-03-19 22:18:26'),
+(15, 'Importar Sim Cards', 'Route', 'AdminImportarSimCardsControllerGetIndex', 'normal', 'fa fa-upload', 0, 1, 0, 1, 12, '2023-03-13 02:01:54', '2023-03-19 22:20:56');
 
 -- --------------------------------------------------------
 
@@ -3393,17 +3399,17 @@ INSERT INTO `cms_menus_privileges` (`id`, `id_cms_menus`, `id_cms_privileges`) V
 (24, 5, 1),
 (25, 6, 2),
 (26, 6, 1),
-(27, 9, 2),
-(28, 9, 1),
 (29, 7, 2),
 (30, 7, 1),
 (31, 12, 2),
 (33, 13, 2),
 (34, 13, 1),
-(39, 14, 2),
-(40, 14, 1),
-(41, 15, 2),
-(42, 15, 1);
+(43, 14, 2),
+(44, 14, 1),
+(45, 15, 2),
+(46, 15, 1),
+(47, 9, 2),
+(48, 9, 1);
 
 -- --------------------------------------------------------
 
@@ -3449,11 +3455,11 @@ INSERT INTO `cms_moduls` (`id`, `name`, `icon`, `path`, `table_name`, `controlle
 (17, 'Almacenes', 'fa fa-home', 'almacenes', 'almacenes', 'AdminAlmacenesController', 0, 0, '2023-02-27 02:12:35', NULL, NULL),
 (18, 'Lotes', 'fa fa-file', 'lotes', 'lotes', 'AdminLotesController', 0, 0, '2023-02-27 03:23:21', NULL, NULL),
 (19, 'Sim Cards', 'fa fa-glass', 'sim_cards', 'sim_cards', 'AdminSimCardsController', 0, 0, '2023-02-27 18:14:08', NULL, NULL),
-(20, 'Personas', 'fa fa-glass', 'personas', 'personas', 'AdminPersonasController', 0, 0, '2023-02-27 20:59:48', NULL, NULL),
+(20, 'Personas', 'fa fa-users', 'personas', 'personas', 'AdminPersonasController', 0, 0, '2023-02-27 20:59:48', NULL, NULL),
 (21, 'Recargas', 'fa fa-money', 'recargas', 'recargas', 'AdminRecargasController', 0, 0, '2023-02-28 17:44:29', NULL, NULL),
 (22, 'Historicos Sim Card', 'fa fa-glass', 'historicos_sim', 'historicos_sim', 'AdminHistoricosSimController', 0, 0, '2023-02-28 19:26:27', NULL, NULL),
-(23, 'Vista Sim card', 'fa fa-glass', 'vsimcard', 'sim_cards', 'AdminVsimcardController', 0, 0, '2023-03-10 01:11:39', NULL, NULL),
-(24, 'Importar Sim Cards', 'fa fa-glass', 'importar_sim_cards', 'sim_cards', 'AdminImportarSimCardsController', 0, 0, '2023-03-13 02:01:54', NULL, NULL);
+(23, 'Vista Sim card', 'fa fa-credit-card', 'vsimcard', 'sim_cards', 'AdminVsimcardController', 0, 0, '2023-03-10 01:11:39', NULL, NULL),
+(24, 'Importar Sim Cards', 'fa fa-upload', 'importar_sim_cards', 'sim_cards', 'AdminImportarSimCardsController', 0, 0, '2023-03-13 02:01:54', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -3712,7 +3718,8 @@ CREATE TABLE `historicos_sim` (
 INSERT INTO `historicos_sim` (`id`, `fecha_historico`, `sim_cards_id`, `status_id`, `almacenes_id`) VALUES
 (1, '2023-02-25', 2, 1, 1),
 (2, '2023-02-28', 2, 3, 1),
-(3, '2023-03-01', 9, 1, 1);
+(3, '2023-03-01', 9, 1, 1),
+(4, '2023-03-11', 389, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -4395,7 +4402,7 @@ ALTER TABLE `cms_email_templates`
 -- AUTO_INCREMENT de la tabla `cms_logs`
 --
 ALTER TABLE `cms_logs`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=135;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=141;
 
 --
 -- AUTO_INCREMENT de la tabla `cms_menus`
@@ -4407,7 +4414,7 @@ ALTER TABLE `cms_menus`
 -- AUTO_INCREMENT de la tabla `cms_menus_privileges`
 --
 ALTER TABLE `cms_menus_privileges`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- AUTO_INCREMENT de la tabla `cms_moduls`
@@ -4467,7 +4474,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT de la tabla `historicos_sim`
 --
 ALTER TABLE `historicos_sim`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `lotes`

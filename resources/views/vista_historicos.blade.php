@@ -29,19 +29,48 @@
   </div>
   <div class="row">
     <div class="col-sm-4">
-      <div class="alert alert-danger " role="alert">
-        <h3>Recargas</h3>
-        @foreach($recargas as $row)
-        <p><strong> Fecha :</strong> {{$row->fecha_recarga}} / <strong> Bs :</strong> {{$row->monto_bs}} / <strong> USD :</strong> {{$row->equivalencia_usd}}</br></p>
-        @endforeach
+      <div class="row">
+        <div class="alert alert-danger " role="alert">
+          <h3>Recargas</h3>
+          @foreach($recargas as $row)
+          <p><strong> Fecha :</strong> {{$row->fecha_recarga}} / <strong> Bs :</strong> {{$row->monto_bs}} / <strong> USD :</strong> {{$row->equivalencia_usd}}</br></p>
+          @endforeach
+        </div>
       </div>
+      <div class="row">
+        <div class="alert alert-danger " role="alert">
+          <h3>Historicos</h3>
+          @foreach($historicos as $row)
+          <p><strong> Fecha :</strong> {{$row->fecha_historico}} / <strong> Almacen :</strong> {{$row->almacen}} / <strong> Status :</strong> {{$row->status}}</br></p>
+          @endforeach
+        </div>
+      </div>
+      
     </div>
     <div class="col-sm-8">
       <div class="alert alert-info " role="alert">
-        <h3>Historico</h3>
-        @foreach($historico as $row1)
-        <p><strong> Fecha :</strong> {{$row1->time}} / <strong> Numero :</strong> {{$row1->number}} / <strong> duracion :</strong> {{$row1->duration}}</br></p>
-        @endforeach
+        <h3>Llamadas</h3>
+        <!-- Mostrar tabla -->
+        <table class='table table-bordered'>
+          <thead>
+              <tr>
+                <th>Fecha</th>
+                <th>Numero</th>
+                <th>Duracion</th>
+               </tr>
+          </thead>
+          <tbody>
+            @foreach($llamadas as $row)
+              <tr>
+                <td>{{$row->time}}</td>
+                <td>{{$row->number}}</td>
+                <td>{{$row->duration}}</td>
+               </tr>
+            @endforeach
+          </tbody>
+        </table>
+
+        
       </div>
     </div>
   </div>

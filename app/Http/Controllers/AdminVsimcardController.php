@@ -250,7 +250,13 @@
   			 $data['page_title'] = 'Detalles de Sim Card';
   			 $data['sim'] = DB::table('vsimcard')->where('id', $id)->first();
 			 $data['recargas'] = DB::table('recargas')->where('sim_cards_id', $id)->get();
-			 $data['historico'] = DB::table('call_record')->where('iccid', ' '.$serial_format)->get();
+			 $data['historicos'] = DB::table('historicos_sim')
+            			->join('status', 'historicos_sim.status_id', '=', 'status.id')
+            			->join('almacenes', 'historicos_sim.almacenes_id', '=', 'almacenes.id')
+            			->select('historicos_sim.*', 'status.descripcion as status', 'almacenes.descripcion as almacen')
+						->where('sim_cards_id', $id)
+            			->get();
+			 $data['llamadas'] = DB::table('call_record')->where('iccid', ' '.$serial_format)->get();
 			 //$data['mi_id'] = $id;
 			 //$data['mi_serial'] = $serial;
 			  
