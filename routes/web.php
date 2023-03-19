@@ -20,3 +20,5 @@ Route::get('/infolaravel', function () {
 
 Route::post('/upload-sim-cards', 'App\Http\Controllers\AdminImportarSimCardsController@uploadSimCards')->name('upload');
 Route::get('/import-sim-cards', 'App\Http\Controllers\AdminImportarSimCardsController@getIndex')->name('import');
+Route::get('/vsimcard', 'App\Http\Controllers\AdminVsimcardController@getIndex')->name('vistasim');
+Route::get('/vsimcard/historico/{id}/{serial}', 'App\Http\Controllers\AdminVsimcardController@getHistorico');

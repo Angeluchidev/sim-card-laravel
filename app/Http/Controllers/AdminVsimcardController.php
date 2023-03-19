@@ -19,7 +19,7 @@
 			$this->button_add = false;
 			$this->button_edit = false;
 			$this->button_delete = false;
-			$this->button_detail = true;
+			$this->button_detail = false;
 			$this->button_show = true;
 			$this->button_filter = true;
 			$this->button_import = false;
@@ -37,22 +37,22 @@
 			$this->col[] = ["label"=>"Fecha Plan","name"=>"fecha_plan"];
 			$this->col[] = ["label"=>"Planes","name"=>"planes_id","join"=>"planes,plan"];
 			$this->col[] = ["label"=>"Persona","name"=>"personas_id","join"=>"personas,nombres"];
-			$this->col[] = ["label"=>"Recargas","name"=>"(SELECT 
-							group_concat(
-								'fecha:','&nbsp;',recargas.fecha_recarga,'/','&nbsp;','Monto:','&nbsp;',recargas.monto_bs,'&nbsp;','BS','/','&nbsp;',recargas.equivalencia_usd,'&nbsp;','$' SEPARATOR '<BR>'
-							)
-							FROM
-								recargas
-							where sim_cards_id = sim_cards.id) as Recargas"];
-			$this->col[] = ["label"=>"Historico","name"=>"(SELECT 
-							group_concat(
-								'fecha:','&nbsp;',historicos_sim.fecha_historico,'/','&nbsp;','Status:','&nbsp;',status.descripcion,'&nbsp;','/','Almacen:','&nbsp;',almacenes.descripcion SEPARATOR '<BR>'
-							)
-							FROM
-								historicos_sim
-								JOIN status ON historicos_sim.status_id = status.id
-								JOIN almacenes ON historicos_sim.almacenes_id = almacenes.id
-							where sim_cards_id = sim_cards.id) as Historico"];				
+			//$this->col[] = ["label"=>"Recargas","name"=>"(SELECT 
+							//group_concat(
+								//'fecha:','&nbsp;',recargas.fecha_recarga,'/','&nbsp;','Monto:','&nbsp;',recargas.monto_bs,'&nbsp;','BS','/','&nbsp;',recargas.equivalencia_usd,'&nbsp;','$' SEPARATOR '<BR>'
+							//)
+							//FROM
+								//recargas
+							//where sim_cards_id = sim_cards.id) as Recargas"];
+			//$this->col[] = ["label"=>"Historico","name"=>"(SELECT 
+							//group_concat(
+								//'fecha:','&nbsp;',historicos_sim.fecha_historico,'/','&nbsp;','Status:','&nbsp;',status.descripcion,'&nbsp;','/','Almacen:','&nbsp;',almacenes.descripcion SEPARATOR '<BR>'
+							//)
+							//FROM
+								//historicos_sim
+								//JOIN status ON historicos_sim.status_id = status.id
+								//JOIN almacenes ON historicos_sim.almacenes_id = almacenes.id
+							//where sim_cards_id = sim_cards.id) as Historico"];				
 
 			# END COLUMNS DO NOT REMOVE THIS LINE
 			# START FORM DO NOT REMOVE THIS LINE
@@ -88,6 +88,7 @@
 	        | 
 	        */
 	        $this->addaction = array();
+			$this->addaction[] = ['label'=>'Ver Detalle','url'=>CRUDBooster::mainpath('historico/[id]/[serial]'),'icon'=>'fa fa-check','color'=>'success'];
 
 
 	        /* 
@@ -221,6 +222,41 @@
 	        
 	        
 	    }
+
+		//public function getIndex() {
+			//First, Add an auth
+			 //if(!CRUDBooster::isView()) CRUDBooster::redirect(CRUDBooster::adminPath(),trans('crudbooster.denied_access'));
+			 
+			 //Create your own query 
+			 //$data = [];
+			 //$data['page_title'] = 'Vista Sim Cardsooooo';
+			 //$data['result'] = DB::table('vsimcard')->orderby('id','desc')->paginate(10);
+			  
+			 //Create a view. Please use `view` method instead of view method from laravel.
+			 //return $this->view('vista_sim_cards',$data);
+		  //}
+
+		public function getHistorico($id,$serial) {
+			
+			if(!CRUDBooster::isUpdate() && $this->global_privilege==FALSE || $this->button_edit==FALSE) {    
+				CRUDBooster::redirect(CRUDBooster::adminPath(),trans("crudbooster.denied_access"));
+			  }
+			 
+			 //Create your own query 
+
+			 $serial_format = trim($serial);
+			 
+			 $data = [];
+  			 $data['page_title'] = 'Detalles de Sim Card';
+  			 $data['sim'] = DB::table('vsimcard')->where('id', $id)->first();
+			 $data['recargas'] = DB::table('recargas')->where('sim_cards_id', $id)->get();
+			 $data['historico'] = DB::table('call_record')->where('iccid', ' '.$serial_format)->get();
+			 //$data['mi_id'] = $id;
+			 //$data['mi_serial'] = $serial;
+			  
+			 //Create a view. Please use `view` method instead of view method from laravel.
+			 return $this->view('vista_historicos',$data);
+		  }
 
 
 	    /*
