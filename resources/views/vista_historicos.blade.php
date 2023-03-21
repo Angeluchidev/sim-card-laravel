@@ -54,8 +54,9 @@
         <table class='table table-bordered'>
           <thead>
               <tr>
-                <th>Fecha</th>
+                <th>Fecha/Hora</th>
                 <th>Numero</th>
+                <th>IMEI</th>
                 <th>Duracion</th>
                </tr>
           </thead>
@@ -64,6 +65,7 @@
               <tr>
                 <td>{{$row->time}}</td>
                 <td>{{$row->number}}</td>
+                <td>{{$row->imei}}</td>
                 <td>{{$row->duration}}</td>
                </tr>
             @endforeach
